@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CineGastronomia — Réquiem para um Sonho | Paulistânia Desvairada</title>
+<meta name="description" content="CineGastronomia — Réquiem para um Sonho. Cinema, comida e conversa para pensar corpo, emagrecimento, desejo e os discursos gastronômicos do nosso tempo.">
+<style>
+:root{
+  --ink:#111;
+  --muted:#666;
+  --line:#dedbd4;
+  --paper:#fbfaf7;
+  --accent:#e33b16;
+  --green:#1f7a4b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:122px}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:800;text-transform:uppercase}
+.navlinks a:hover{color:var(--accent)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1.8px solid var(--accent);color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+.nav-cta{padding:12px 16px;font-size:12px}
+.btn{background:var(--accent);color:#fff;padding:16px 22px;border-radius:2px}
+.btn.secondary{background:transparent;color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;padding:48px 0 30px}
+.eyebrow{font-size:13px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+h1{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,7vw,104px);line-height:.88;letter-spacing:-.035em;margin:0 0 20px}
+.lead{font-family:Georgia,serif;font-size:clamp(22px,2.5vw,34px);line-height:1.18;margin:0 0 22px;max-width:760px}
+.intro{font-size:18px;line-height:1.62;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 18px}
+.pill{border:1px solid #cfcac0;padding:10px 12px;font-weight:800;font-size:13px;background:#fff}
+.price{font-size:28px;font-weight:900;margin:8px 0 18px}
+.hero-media{position:relative}
+.hero-media img{width:100%;height:630px;object-fit:cover}
+.caption{font-size:11px;color:#777;margin-top:8px}
+.notice{margin:22px 0 0;border-left:4px solid var(--accent);padding:14px 16px;background:#fff;font-size:14px;line-height:1.45}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.section-kicker{font-size:12px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+h2{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,66px);line-height:.95;margin:0 0 24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:22px;min-height:230px}
+.card h3{margin:0 0 10px;font-size:20px}
+.card p{margin:0;line-height:1.55;color:#333}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.story-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.65;margin:0 0 18px}
+.pull{font-size:29px!important;line-height:1.25!important;font-weight:700}
+.story-images{display:grid;gap:16px}
+.story-images img{width:100%;max-height:360px;object-fit:cover}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.step{padding:26px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step strong{display:block;color:var(--accent);font-size:12px;text-transform:uppercase;margin-bottom:8px}
+.fit{display:grid;grid-template-columns:1.1fr .9fr;gap:38px}
+.fit ul{margin:0;padding-left:20px;font-size:18px;line-height:1.7}
+.info-box{background:#111;color:#fff;padding:28px}
+.info-box h3{font-size:26px;margin:0 0 16px}
+.info-box p{margin:8px 0;line-height:1.5}
+.buy{display:grid;grid-template-columns:1fr .8fr;gap:36px;align-items:center;background:#fff;border:2px solid var(--accent);padding:34px}
+.buy h2{font-size:48px;margin-bottom:12px}
+.buy p{font-size:17px;line-height:1.55}
+.buy-side{border-left:1px solid #e1ddd7;padding-left:30px}
+.buy-side .price{font-size:42px}
+.small{font-size:12px;color:#666;line-height:1.5}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:800;cursor:pointer}
+.faq p{line-height:1.55;color:#333}
+footer{padding:36px 0 92px}
+.footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;font-weight:700}
+.sticky-buy{display:none}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .nav{height:70px}.logo{width:98px}
+  .hero,.story,.fit,.buy{grid-template-columns:1fr}
+  .hero{padding-top:28px}
+  .hero-media{order:-1}
+  .hero-media img{height:390px}
+  .grid4{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .buy-side{border-left:0;border-top:1px solid #e1ddd7;padding:22px 0 0}
+  .sticky-buy{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#111;color:#fff;padding:10px 14px;align-items:center;justify-content:space-between;gap:12px}
+  .sticky-buy .btn{padding:12px 16px;white-space:nowrap}
+  .sticky-buy strong{font-size:14px}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,1160px)}
+  h1{font-size:58px}
+  .lead{font-size:24px}
+  .intro{font-size:16px}
+  .grid4{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .hero-media img{height:330px}
+  .nav-cta{display:none}
+}
+
+.drink-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);padding:18px}
+.drink-feature img{width:100%;height:300px;object-fit:cover}
+.drink-feature h3{font-size:28px;margin:0 0 10px}
+.drink-feature p{font-size:17px;line-height:1.55;margin:0}
+.room-photo{margin-top:24px}
+.room-photo img{width:100%;height:470px;object-fit:cover}
+.room-photo figcaption{font-size:12px;color:#666;margin-top:8px}
+@media(max-width:900px){
+  .drink-feature{grid-template-columns:1fr}
+  .drink-feature img{height:280px}
+  .room-photo img{height:330px}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+    <nav class="navlinks">
+      <a href="index.html#experiencias">Experiências</a>
+      <a href="index.html#agenda">Agenda</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#comprar">Garantir meu lugar</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">CineGastronomia</div>
+      <h1>Réquiem para um Sonho</h1>
+      <p class="lead">O que o desejo de emagrecer pode fazer com a nossa relação com a comida — e com o nosso próprio corpo?</p>
+      <p class="intro">Nesta edição do <strong>CineGastronomia</strong>, assistimos juntos a <em>Réquiem para um Sonho</em> para investigar <strong>como o cinema elabora os discursos gastronômicos que nos atravessam</strong> — ideias, desejos, medos e comportamentos que influenciam nossa maneira de comer e de pensar o corpo.</p>
+      <p class="intro">A partir do filme, vamos olhar para uma questão especialmente presente hoje: a popularização das canetas emagrecedoras e a fronteira, nem sempre simples, entre <strong>seu uso como recurso no tratamento da obesidade</strong> e sua incorporação a uma cultura marcada pela pressão para emagrecer e se adequar a determinados padrões estéticos.</p>
+
+      <div class="meta">
+        <span class="pill">10 SETEMBRO 2026</span>
+        <span class="pill">SOUSAS · CAMPINAS</span>
+        <span class="pill">CINEGASTRONOMIA</span>
+      </div>
+      <div class="price">R$ 30 por pessoa</div>
+      <a class="btn" href="#comprar">Garantir meu lugar</a>
+
+      <div class="notice"><strong>Comidas e bebidas estarão à venda durante a noite</strong> — inclusive nosso drink de pipoca. O ingresso dá acesso à sessão e à conversa. Não haverá prato ou menu temático inspirado no filme.</div>
+    </div>
+
+    <div class="hero-media">
+      <img src="assets/requiem-cartaz.webp" alt="Cartaz do filme Réquiem para um Sonho">
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Em poucos segundos</div>
+      <h2>O que você vai encontrar</h2>
+      <div class="grid4">
+        <article class="card">
+          <h3>Um grande filme visto coletivamente</h3>
+          <p>Assistimos a <em>Réquiem para um Sonho</em> juntos. A experiência não termina quando sobem os créditos.</p>
+        </article>
+        <article class="card">
+          <h3>Uma questão que está acontecendo agora</h3>
+          <p>Canetas emagrecedoras, tratamento da obesidade, pressão estética, controle da fome e as mudanças que tudo isso pode provocar em nossa relação com a comida.</p>
+        </article>
+        <article class="card">
+          <h3>Uma conversa sem respostas prontas</h3>
+          <p>Não é uma palestra contra as canetas emagrecedoras. Queremos discutir justamente as tensões entre saúde, tratamento, desejo, estética e comportamento.</p>
+        </article>
+        <article class="card">
+          <h3>Comidas e bebidas durante a noite</h3>
+          <p>O cardápio estará disponível para quem quiser comer ou beber durante a experiência — inclusive com nosso drink de pipoca.</p>
+        </article>
+      </div>
+      <div class="drink-feature">
+        <img src="assets/drink-pipoca.jpg" alt="Drink de pipoca da Paulistânia Desvairada">
+        <div>
+          <div class="section-kicker">Para acompanhar a sessão</div>
+          <h3>Um drink de pipoca para a noite</h3>
+          <p>Comidas e bebidas estarão à venda durante a experiência — inclusive nosso <strong>drink de pipoca</strong>. O consumo é opcional e vendido à parte; não haverá prato ou menu temático inspirado no filme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">Por que agora?</div>
+        <h2>Por que assistir a este filme em 2026?</h2>
+        <p>Lançado em 2000, <em>Réquiem para um Sonho</em> acompanha personagens atravessados pelo desejo, pela compulsão e pela promessa de transformação. Entre eles está Sara Goldfarb, cuja vontade de emagrecer para aparecer na televisão desencadeia uma relação cada vez mais perturbadora com o próprio corpo e com substâncias prescritas para a perda de peso.</p>
+        <p>Mais de duas décadas depois, o contexto é outro — e justamente por isso o filme provoca novas perguntas.</p>
+        <p>Vivemos a popularização de medicamentos que representam um avanço importante no tratamento da obesidade e de outras condições, mas que também passaram a ocupar um lugar de destaque no imaginário contemporâneo sobre <strong>magreza, alimentação e controle do corpo</strong>.</p>
+        <p class="pull">Onde termina o cuidado com a saúde e começa a pressão para corresponder a um padrão?</p>
+        <p>Não buscamos chegar à sessão com uma resposta pronta — nem transformar a conversa em um julgamento sobre quem usa ou deixa de usar esses medicamentos. Queremos aproveitar o cinema para observar criticamente <strong>os discursos, desejos e contradições que estão sendo produzidos ao redor deles</strong>.</p>
+      </div>
+      <div class="story-images">
+        <img src="assets/requiem-sara-tv.jpeg" alt="Cena de Réquiem para um Sonho com Sara Goldfarb">
+        <img src="assets/requiem-pilula.jpeg" alt="Cena de Réquiem para um Sonho">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">A proposta</div>
+      <h2>Por que isso é CineGastronomia?</h2>
+      <div class="story">
+        <div class="story-copy">
+          <p>O <strong>CineGastronomia</strong> parte de uma ideia simples: <strong>o cinema não apenas mostra o que comemos.</strong> Ele também participa da construção das ideias que temos sobre comida, corpo, desejo, prazer, consumo e comportamento.</p>
+          <p>Em cada encontro, escolhemos um filme para observar <strong>como o cinema elabora os discursos gastronômicos que nos atravessam</strong> e colocá-los em conversa com questões do nosso tempo.</p>
+          <p><strong>O cinema abre a discussão; a mesa faz a conversa acontecer.</strong></p>
+        </div>
+        <img src="assets/requiem-montagem.jpg" alt="Montagem de cenas de Réquiem para um Sonho">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Como funciona</div>
+      <h2>A noite em três movimentos</h2>
+      <div class="timeline">
+        <div class="step"><strong>01 · Chegada</strong><span>Você chega, se acomoda e pode pedir comidas e bebidas do cardápio.</span></div>
+        <div class="step"><strong>02 · Filme</strong><span>Assistimos juntos a <em>Réquiem para um Sonho</em>.</span></div>
+        <div class="step"><strong>03 · Conversa à mesa</strong><span>Depois da sessão, permanecemos à mesa para conversar sobre as questões provocadas pelo filme.</span></div>
+      </div>
+      <figure class="room-photo">
+        <img src="assets/salao-cinegastronomia.jpg" alt="Sessão do CineGastronomia na Paulistânia Desvairada">
+        <figcaption>Uma sessão do CineGastronomia na Paulistânia Desvairada.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap fit">
+      <div>
+        <div class="section-kicker">Para quem é</div>
+        <h2>Essa experiência é para você se...</h2>
+        <ul>
+          <li>gosta de cinema, mas sente falta de conversar sobre o que acabou de assistir;</li>
+          <li>procura programas culturais diferentes em Campinas;</li>
+          <li>se interessa pelas relações entre comida, corpo e sociedade;</li>
+          <li>tem curiosidade sobre as mudanças que estamos vivendo na maneira de comer;</li>
+          <li>ou simplesmente quer assistir a um grande filme acompanhado de uma boa conversa.</li>
+        </ul>
+      </div>
+      <aside class="info-box">
+        <h3>Você não precisa entender de cinema ou gastronomia.</h3>
+        <p>Também não precisa ter visto o filme antes.</p>
+        <p>A proposta não é uma aula nem um debate formal: é uma experiência coletiva de cinema e conversa.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="buy">
+        <div>
+          <div class="section-kicker">Seu lugar à mesa</div>
+          <h2>CineGastronomia — Réquiem para um Sonho</h2>
+          <p><strong>10 de setembro de 2026</strong><br>Paulistânia Desvairada · Restaurante Tio Dinho<br>Rua João Leone, 51 · Sousas · Campinas</p>
+          <p class="small"><strong>Importante:</strong> o ingresso dá acesso à sessão e à conversa. Comidas e bebidas são vendidas separadamente. Não haverá prato ou menu temático inspirado no filme.</p>
+        </div>
+        <div class="buy-side">
+          <div class="price">R$ 30</div>
+          <p><strong>por pessoa</strong></p>
+          <a class="btn" href="checkout.html?experiencia=Réquiem%20para%20um%20sonho&categoria=CineGastronomia&data=10/09/2026&bilhete=Bilhete%20individual&valor=30">Comprar bilhete — R$ 30</a>
+          <p class="small">Este botão já marca o ponto de conversão da página. Quando você tiver o link de pagamento, basta substituir o endereço do botão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-kicker">Dúvidas rápidas</div>
+      <h2>Antes de comprar</h2>
+      <details><summary>O ingresso inclui comida?</summary><p>Não. O ingresso dá acesso à sessão e à conversa do CineGastronomia. Comidas e bebidas estarão à venda separadamente durante a noite.</p></details>
+      <details><summary>Vai ter prato ou menu temático inspirado no filme?</summary><p>Não. A relação entre cinema e gastronomia acontece na investigação dos discursos gastronômicos que o filme elabora e na conversa posterior. Haverá comidas e bebidas à venda, inclusive um drink de pipoca.</p></details>
+      <details><summary>É uma palestra sobre canetas emagrecedoras?</summary><p>Não. O filme é o ponto de partida para uma conversa sobre corpo, comida, emagrecimento, tratamento da obesidade, pressão estética e as contradições que atravessam essas questões.</p></details>
+      <details><summary>Vocês são contra o uso das canetas?</summary><p>Não é essa a proposta. A discussão considera tanto seu uso como recurso no tratamento da obesidade quanto os efeitos de sua circulação em uma sociedade marcada pela pressão por determinados padrões estéticos.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerline">
+    <span>© 2026 Paulistânia Desvairada</span>
+    <span>paulistaniadesvairada@gmail.com</span>
+  </div>
+</footer>
+
+<div class="sticky-buy">
+  <strong>10 SET · R$ 30</strong>
+  <a class="btn" href="#comprar">Garantir meu lugar</a>
+</div>
+</body>
+</html>

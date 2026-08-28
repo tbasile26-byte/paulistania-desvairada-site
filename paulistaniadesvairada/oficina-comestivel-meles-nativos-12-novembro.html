@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oficina Comestível — Meles Nativos | Paulistânia Desvairada</title>
+<meta name="description" content="Oficina Comestível — Meles Nativos: degustação guiada de seis meles de abelhas nativas sem ferrão e preparação coletiva de risoto de queijo com mel.">
+<style>
+:root{
+  --ink:#111;
+  --muted:#666;
+  --line:#dedbd4;
+  --paper:#fbfaf7;
+  --accent:#e33b16;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:122px}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:800;text-transform:uppercase}
+.navlinks a:hover{color:var(--accent)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1.8px solid var(--accent);color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+.nav-cta{padding:12px 16px;font-size:12px}
+.btn{background:var(--accent);color:#fff;padding:16px 22px;border-radius:2px}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;padding:44px 0 30px}
+.eyebrow{font-size:13px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+h1{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,6vw,86px);line-height:.9;letter-spacing:-.03em;margin:0 0 20px}
+.lead{font-family:Georgia,serif;font-size:clamp(22px,2.4vw,33px);line-height:1.18;margin:0 0 22px;max-width:760px}
+.intro{font-size:18px;line-height:1.62;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 18px}
+.pill{border:1px solid #cfcac0;padding:10px 12px;font-weight:800;font-size:13px;background:#fff}
+.price{font-size:28px;font-weight:900;margin:8px 0 18px}
+.hero-media{background:#efeae2;display:flex;align-items:center;justify-content:center}
+.hero-media img{width:100%;height:auto;max-height:620px;object-fit:contain}
+.notice{margin:22px 0 0;border-left:4px solid var(--accent);padding:14px 16px;background:#fff;font-size:14px;line-height:1.45}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.section-kicker{font-size:12px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+h2{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,66px);line-height:.95;margin:0 0 24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:22px;min-height:245px}
+.card h3{margin:0 0 10px;font-size:20px}
+.card p{margin:0;line-height:1.55;color:#333}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.story-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.65;margin:0 0 18px}
+.pull{font-size:30px!important;line-height:1.23!important;font-weight:700}
+.story-images{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.story-images img{width:100%;height:auto;max-height:430px;object-fit:contain;background:#efeae2}
+.honey-list{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:26px}
+.honey{background:#fff;border:1px solid var(--line);padding:18px 12px;text-align:center;font-weight:800}
+.quote-band{background:#111;color:#fff;border-top:0;padding:72px 0}
+.quote-band blockquote{font-family:Georgia,serif;font-size:clamp(32px,5vw,60px);line-height:1.08;margin:0;max-width:1000px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.step{padding:24px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step strong{display:block;color:var(--accent);font-size:12px;text-transform:uppercase;margin-bottom:8px}
+.fit{display:grid;grid-template-columns:1.1fr .9fr;gap:38px}
+.fit ul{margin:0;padding-left:20px;font-size:18px;line-height:1.7}
+.info-box{background:#111;color:#fff;padding:28px}
+.info-box h3{font-size:26px;margin:0 0 16px}
+.info-box p{margin:8px 0;line-height:1.5}
+.producer{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center;background:#fff;border:1px solid var(--line);padding:18px}
+.producer img{width:100%;height:auto;max-height:520px;object-fit:contain;background:#efeae2}
+.producer h3{font-size:32px;margin:0 0 12px}
+.producer p{font-size:18px;line-height:1.6;margin:0 0 14px}
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ticket{background:#fff;border:1px solid var(--line);padding:24px}
+.ticket h3{font-size:24px;margin:0 0 6px}
+.ticket .ticket-price{font-size:36px;font-weight:900;margin:6px 0 14px}
+.ticket p{line-height:1.55;color:#333}
+.ticket .btn{width:100%;margin-top:14px}
+.ticket.moderado{border:2px solid var(--accent)}
+.ticket.incentivo{border-top:4px solid #1e5f8a}
+.ticket.minimo{border-top:4px solid #d54b19}
+.buy-note{margin-top:18px;font-size:14px;line-height:1.55;color:#444}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:800;cursor:pointer}
+.faq p{line-height:1.55;color:#333}
+footer{padding:36px 0 92px}
+.footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;font-weight:700}
+.sticky-buy{display:none}
+@media(max-width:1000px){
+  .timeline{grid-template-columns:1fr 1fr}
+  .honey-list{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .nav{height:70px}.logo{width:98px}
+  .hero,.story,.fit,.producer{grid-template-columns:1fr}
+  .hero{padding-top:28px}
+  .hero-media{order:-1}
+  .hero-media img{max-height:500px}
+  .grid4{grid-template-columns:1fr 1fr}
+  .tickets{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .sticky-buy{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#111;color:#fff;padding:10px 14px;align-items:center;justify-content:space-between;gap:12px}
+  .sticky-buy .btn{padding:12px 16px;white-space:nowrap}
+  .sticky-buy strong{font-size:14px}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,1160px)}
+  h1{font-size:50px}
+  .lead{font-size:24px}
+  .intro{font-size:16px}
+  .grid4,.story-images,.honey-list{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+    <nav class="navlinks">
+      <a href="experiencias.html">Experiências</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#comprar">Garantir meu lugar</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Oficina Comestível</div>
+      <h1>Meles Nativos</h1>
+      <p class="lead">Provar um ingrediente, entender de onde ele vem e descobrir o que ele pode virar na cozinha.</p>
+      <p class="intro">Nesta edição da <strong>Oficina Comestível</strong>, a Paulistânia Desvairada recebe <strong>Guilherme Aguirre, do Meliponário Airbnbee</strong>, para uma experiência dedicada aos meles de abelhas nativas sem ferrão.</p>
+      <p class="intro">Começamos pela origem: conhecemos diferentes espécies, territórios e características desses meles. Depois, seguimos para uma <strong>degustação guiada</strong>, afinando o paladar para perceber acidez, aroma, textura e intensidade.</p>
+      <p class="intro">E então vem a transformação: na cozinha, o grupo prepara coletivamente um <strong>risoto de queijo</strong>, pensado para encontrar o mel no ponto certo.</p>
+
+      <div class="meta">
+        <span class="pill">12 NOVEMBRO 2026</span>
+        <span class="pill">SOUSAS · CAMPINAS</span>
+        <span class="pill">DEGUSTAÇÃO + COZINHA</span>
+      </div>
+      <div class="price">Bilhete Consciente · R$ 120 · R$ 150 · R$ 180</div>
+      <a class="btn" href="#comprar">Escolher meu bilhete</a>
+      <div class="notice"><strong>Seis meles, uma degustação guiada e uma transformação culinária.</strong> A experiência reúne produtor, ingrediente, paladar e técnica.</div>
+    </div>
+
+    <div class="hero-media">
+      <img src="assets/meles-salao-abelha.jpg" alt="Experiência sobre meles nativos na Paulistânia Desvairada">
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Em poucos segundos</div>
+      <h2>O que você vai encontrar</h2>
+      <div class="grid4">
+        <article class="card">
+          <h3>Um produtor local à mesa</h3>
+          <p>Guilherme Aguirre apresenta o universo do Meliponário Airbnbee e aproxima o grupo da produção de meles de abelhas nativas sem ferrão.</p>
+        </article>
+        <article class="card">
+          <h3>Seis meles para provar</h3>
+          <p>Jandaíra, jupará, uruçu-amarela, tiúba, jataí e borá entram numa degustação guiada para revelar diferenças sensoriais.</p>
+        </article>
+        <article class="card">
+          <h3>Um paladar mais atento</h3>
+          <p>Acidez, aroma, textura, intensidade e persistência passam a ser percebidos de maneira mais consciente.</p>
+        </article>
+        <article class="card">
+          <h3>Da prova para a cozinha</h3>
+          <p>Depois de conhecer o ingrediente, o grupo prepara um risoto de queijo, explorando como o mel pode participar de uma preparação salgada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">Por que Oficina Comestível?</div>
+        <h2>Um ingrediente, quem o produz e o que ele pode virar</h2>
+        <p>A <strong>Oficina Comestível</strong> parte de um ingrediente e de quem o produz.</p>
+        <p>Em cada edição, convidamos um produtor local para apresentar um alimento a partir de sua origem, do território e do modo como é feito. Primeiro, provamos. Depois, a Paulistânia Desvairada leva esse ingrediente para a cozinha e investiga suas possibilidades de transformação.</p>
+        <p>A experiência junta <strong>produto, produtor, paladar e técnica</strong>.</p>
+        <p class="pull">Conhecer um ingrediente muda a maneira como a gente cozinha com ele.</p>
+      </div>
+      <div class="story-images">
+        <img src="assets/meles-mandacaia.jpg" alt="Frascos de mel de abelha mandaçaia">
+        <img src="assets/meles-abelhas-colmeia.jpg" alt="Abelhas nativas sem ferrão na colmeia">
+        <img src="assets/meles-abelha-flor.jpg" alt="Abelha nativa em uma flor">
+        <img src="assets/meles-fermentacao.jpg" alt="Apresentação sobre características dos meles">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Degustação guiada</div>
+      <h2>Um mel não é igual ao outro</h2>
+      <div class="story">
+        <div class="story-copy">
+          <p>Muitas vezes falamos de “mel” como se fosse uma coisa só.</p>
+          <p>Mas os meles de abelhas nativas podem variar profundamente em <strong>acidez, aroma, textura, doçura e intensidade</strong>.</p>
+          <p>Uma jataí não produz o mesmo mel que uma borá. Uma uruçu-amarela não oferece a mesma experiência de uma tiúba. Cada espécie, cada território e cada manejo deixam marcas sensoriais.</p>
+          <p class="pull">O que antes parecia apenas “doce” começa a revelar camadas.</p>
+        </div>
+        <img src="assets/meles-conversa-mesa.jpg" alt="Conversa e degustação durante uma experiência da Paulistânia" style="width:100%;height:auto;max-height:600px;object-fit:contain;background:#efeae2">
+      </div>
+
+      <div class="honey-list">
+        <div class="honey">Jandaíra</div>
+        <div class="honey">Jupará</div>
+        <div class="honey">Uruçu-amarela</div>
+        <div class="honey">Tiúba</div>
+        <div class="honey">Jataí</div>
+        <div class="honey">Borá</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <blockquote><strong>Quem produz apresenta o ingrediente;</strong> quem cozinha investiga suas possibilidades.</blockquote>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">Da colmeia à panela</div>
+        <h2>Primeiro conhecer. Depois transformar.</h2>
+        <p>Depois da degustação, a experiência muda de lugar.</p>
+        <p>Saímos da prova e entramos na cozinha.</p>
+        <p>O grupo prepara coletivamente um <strong>risoto de queijo</strong>, pensado para receber o mel sem transformá-lo apenas em elemento doce.</p>
+        <p>A proposta é encontrar equilíbrio: perceber como acidez, aroma e textura podem participar de um prato salgado e como o ingrediente se comporta quando passa pela transformação culinária.</p>
+        <p class="pull">Primeiro, conhecer. Depois, transformar. Por fim, comer junto.</p>
+      </div>
+      <div>
+        <img src="assets/meles-cozinha-coletiva.jpg" alt="Participantes cozinhando coletivamente na Paulistânia Desvairada" style="width:100%;height:auto;max-height:650px;object-fit:contain;background:#efeae2">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Como funciona</div>
+      <h2>A experiência em cinco movimentos</h2>
+      <div class="timeline">
+        <div class="step"><strong>01 · Conhecer</strong><span>Guilherme apresenta as abelhas nativas, os meles e suas relações com o território.</span></div>
+        <div class="step"><strong>02 · Degustar</strong><span>Provamos seis tipos de mel e começamos a perceber suas diferenças.</span></div>
+        <div class="step"><strong>03 · Conversar sobre sabor</strong><span>Acidez, aroma, textura e intensidade entram em discussão a partir do paladar.</span></div>
+        <div class="step"><strong>04 · Cozinhar</strong><span>O grupo entra na cozinha para preparar coletivamente o risoto de queijo.</span></div>
+        <div class="step"><strong>05 · Comer junto</strong><span>A noite termina à mesa, provando a transformação do ingrediente que acabamos de conhecer.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap fit">
+      <div>
+        <div class="section-kicker">Para quem é</div>
+        <h2>Essa experiência é para você se...</h2>
+        <ul>
+          <li>tem curiosidade por ingredientes brasileiros e biodiversidade;</li>
+          <li>gosta de provar sabores novos e entender suas diferenças;</li>
+          <li>se interessa por produtores locais e pela origem do que come;</li>
+          <li>quer aprender a usar mel para além de sobremesas e preparações doces;</li>
+          <li>gosta de experiências que juntam conhecimento e prática;</li>
+          <li>quer conhecer pessoas e compartilhar uma atividade em grupo pequeno;</li>
+          <li>ou simplesmente quer descobrir que existem muitos jeitos de provar mel.</li>
+        </ul>
+      </div>
+      <aside class="info-box">
+        <h3>Você pode chegar sem saber nada sobre o assunto.</h3>
+        <p>A experiência foi pensada para quem quer descobrir esse universo pelo paladar, pela conversa e pela prática.</p>
+        <p>Também é possível vir sozinho: o grupo pequeno favorece troca e encontro entre os participantes.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap producer">
+      <img src="assets/guilherme-aguirre-airbnbee.jpg" alt="Guilherme Aguirre, do Meliponário Airbnbee">
+      <div>
+        <div class="section-kicker">Quem participa da experiência</div>
+        <h3>Guilherme Aguirre — Meliponário Airbnbee</h3>
+        <p>Guilherme conduz a parte dedicada às <strong>abelhas nativas sem ferrão, à produção dos meles e às diferenças entre as espécies</strong>, aproximando o grupo do trabalho de quem está diretamente ligado ao ingrediente.</p>
+        <p>Depois, a <strong>Paulistânia Desvairada</strong> assume a etapa de transformação culinária, levando o que foi descoberto na degustação para dentro da cozinha.</p>
+        <p><strong>Esse encontro entre produtor e cozinha é o coração da Oficina Comestível.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="section-kicker">Bilhete Consciente</div>
+      <h2>Você escolhe quanto pagar</h2>
+      <p style="font-size:18px;line-height:1.6;max-width:850px;margin-bottom:28px">A experiência é a mesma para todos. Você escolhe o valor de acordo com sua realidade e com o quanto deseja apoiar a continuidade do projeto.</p>
+
+      <div class="tickets">
+        <article class="ticket minimo">
+          <h3>Mínimo</h3>
+          <div class="ticket-price">R$ 120</div>
+          <p>Garante sua participação e cobre o básico necessário para realizar a experiência.</p>
+          <a class="btn" href="checkout.html?experiencia=Meles Nativos&categoria=Oficina Comestível&data=12/11/2026&bilhete=Bilhete%20Consciente&valor=120" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Mínimo — R$ 120.'); return false;">Escolher R$ 120</a>
+        </article>
+
+        <article class="ticket moderado">
+          <h3>Moderado</h3>
+          <div class="ticket-price">R$ 150</div>
+          <p>Um valor mais equilibrado, que ajuda a sustentar a continuidade do projeto e das próximas experiências.</p>
+          <a class="btn" href="checkout.html?experiencia=Meles Nativos&categoria=Oficina Comestível&data=12/11/2026&bilhete=Bilhete%20Consciente&valor=150" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Moderado — R$ 150.'); return false;">Escolher R$ 150</a>
+        </article>
+
+        <article class="ticket incentivo">
+          <h3>Incentivo</h3>
+          <div class="ticket-price">R$ 180</div>
+          <p>Para quem pode e deseja apoiar ainda mais a realização e o fortalecimento de novas oficinas e experiências.</p>
+          <a class="btn" href="checkout.html?experiencia=Meles Nativos&categoria=Oficina Comestível&data=12/11/2026&bilhete=Bilhete%20Consciente&valor=180" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Incentivo — R$ 180.'); return false;">Escolher R$ 180</a>
+        </article>
+      </div>
+
+      <p class="buy-note"><strong>12 de novembro de 2026</strong> · Paulistânia Desvairada / Restaurante Tio Dinho · Rua João Leone, 51 · Sousas · Campinas.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-kicker">Dúvidas rápidas</div>
+      <h2>Antes de comprar</h2>
+      <details><summary>Preciso entender de mel ou de abelhas?</summary><p>Não. A experiência foi pensada justamente para quem quer descobrir esse universo.</p></details>
+      <details><summary>Vou provar todos os meles?</summary><p>Sim. A degustação guiada inclui jandaíra, jupará, uruçu-amarela, tiúba, jataí e borá.</p></details>
+      <details><summary>Tem parte prática?</summary><p>Sim. Depois da degustação, o grupo prepara coletivamente um risoto de queijo com mel.</p></details>
+      <details><summary>O risoto está incluído?</summary><p>Sim. A etapa culinária e a degustação do prato fazem parte da experiência.</p></details>
+      <details><summary>Posso ir sozinho?</summary><p>Sim. A proposta acontece em grupo pequeno e favorece conversa, troca e encontro entre os participantes.</p></details>
+      <details><summary>Posso levar minha própria bebida?</summary><p>Sim. Também vendemos bebidas no local. Se preferir trazer a sua, cobramos <strong>taxa de rolha de R$ 25 por garrafa</strong>.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerline">
+    <span>© 2026 Paulistânia Desvairada</span>
+    <span>paulistaniadesvairada@gmail.com</span>
+  </div>
+</footer>
+
+<div class="sticky-buy">
+  <strong>12 NOV · A PARTIR DE R$ 120</strong>
+  <a class="btn" href="#comprar">Escolher bilhete</a>
+</div>
+</body>
+</html>

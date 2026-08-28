@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/paulistaniadesvairada/",
+      "permanent": true
+    }
+  ]
+}

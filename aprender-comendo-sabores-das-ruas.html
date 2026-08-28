@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aprender Comendo — Sabores das Ruas | Paulistânia Desvairada</title>
+<meta name="description" content="Aprender Comendo — Sabores das Ruas, com Rafaela Basso. Uma experiência sobre a história da comida de rua no Brasil, com empadinha de palmito inclusa.">
+<style>
+:root{
+  --ink:#111;
+  --muted:#666;
+  --line:#dedbd4;
+  --paper:#fbfaf7;
+  --accent:#e33b16;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:122px}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:800;text-transform:uppercase}
+.navlinks a:hover{color:var(--accent)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1.8px solid var(--accent);color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+.nav-cta{padding:12px 16px;font-size:12px}
+.btn{background:var(--accent);color:#fff;padding:16px 22px;border-radius:2px}
+.hero{display:grid;grid-template-columns:1.03fr .97fr;gap:42px;align-items:center;padding:48px 0 30px}
+.eyebrow{font-size:13px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+h1{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,7vw,104px);line-height:.88;letter-spacing:-.035em;margin:0 0 20px}
+.lead{font-family:Georgia,serif;font-size:clamp(22px,2.5vw,34px);line-height:1.18;margin:0 0 22px;max-width:760px}
+.intro{font-size:18px;line-height:1.62;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 18px}
+.pill{border:1px solid #cfcac0;padding:10px 12px;font-weight:800;font-size:13px;background:#fff}
+.price{font-size:28px;font-weight:900;margin:8px 0 18px}
+.hero-media{position:relative}
+.hero-media img{width:100%;height:600px;object-fit:cover;object-position:center}
+.notice{margin:22px 0 0;border-left:4px solid var(--accent);padding:14px 16px;background:#fff;font-size:14px;line-height:1.45}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.section-kicker{font-size:12px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+h2{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,66px);line-height:.95;margin:0 0 24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:22px;min-height:230px}
+.card h3{margin:0 0 10px;font-size:20px}
+.card p{margin:0;line-height:1.55;color:#333}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.story-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.65;margin:0 0 18px}
+.pull{font-size:29px!important;line-height:1.25!important;font-weight:700}
+.story-images{display:grid;gap:16px}
+.story-images img{width:100%;max-height:360px;object-fit:cover}
+.learn-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;margin-top:28px;background:#fff;border:1px solid var(--line);padding:18px}
+.learn-feature img{width:100%;height:340px;object-fit:cover}
+.learn-feature h3{font-size:28px;margin:0 0 10px}
+.learn-feature p{font-size:17px;line-height:1.55;margin:0}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.step{padding:26px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step strong{display:block;color:var(--accent);font-size:12px;text-transform:uppercase;margin-bottom:8px}
+.room-photo{margin-top:24px}
+.room-photo img{width:100%;height:470px;object-fit:cover}
+.room-photo figcaption{font-size:12px;color:#666;margin-top:8px}
+.fit{display:grid;grid-template-columns:1.1fr .9fr;gap:38px}
+.fit ul{margin:0;padding-left:20px;font-size:18px;line-height:1.7}
+.info-box{background:#111;color:#fff;padding:28px}
+.info-box h3{font-size:26px;margin:0 0 16px}
+.info-box p{margin:8px 0;line-height:1.5}
+.bio{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+.bio-media{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bio-media img{width:100%;height:390px;object-fit:cover}
+.bio-copy p{font-size:17px;line-height:1.65;margin:0 0 16px}
+.buy{display:grid;grid-template-columns:1fr .8fr;gap:36px;align-items:center;background:#fff;border:2px solid var(--accent);padding:34px}
+.buy h2{font-size:48px;margin-bottom:12px}
+.buy p{font-size:17px;line-height:1.55}
+.buy-side{border-left:1px solid #e1ddd7;padding-left:30px}
+.buy-side .price{font-size:42px}
+.small{font-size:12px;color:#666;line-height:1.5}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:800;cursor:pointer}
+.faq p{line-height:1.55;color:#333}
+footer{padding:36px 0 92px}
+.footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;font-weight:700}
+.sticky-buy{display:none}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .nav{height:70px}.logo{width:98px}
+  .hero,.story,.fit,.bio,.buy,.learn-feature{grid-template-columns:1fr}
+  .hero{padding-top:28px}
+  .hero-media{order:-1}
+  .hero-media img{height:390px}
+  .grid4{grid-template-columns:1fr 1fr}
+  .timeline{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .buy-side{border-left:0;border-top:1px solid #e1ddd7;padding:22px 0 0}
+  .learn-feature img{height:280px}
+  .room-photo img{height:330px}
+  .sticky-buy{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#111;color:#fff;padding:10px 14px;align-items:center;justify-content:space-between;gap:12px}
+  .sticky-buy .btn{padding:12px 16px;white-space:nowrap}
+  .sticky-buy strong{font-size:14px}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,1160px)}
+  h1{font-size:58px}
+  .lead{font-size:24px}
+  .intro{font-size:16px}
+  .grid4{grid-template-columns:1fr}
+  .bio-media{grid-template-columns:1fr}
+  .bio-media img{height:auto}
+  section{padding:48px 0}
+  .hero-media img{height:330px}
+  .nav-cta{display:none}
+}
+
+/* Correções específicas de enquadramento das fotos desta página */
+.hero-media.hero-rafaela{background:#f2eee7;display:flex;align-items:center;justify-content:center}
+.hero-media.hero-rafaela img{height:auto;max-height:600px;object-fit:contain;object-position:center}
+.book-full{object-fit:contain!important;object-position:center!important;background:#fff}
+.rafaela-full{object-fit:contain!important;object-position:center top!important;background:#f4f1ea}
+.bio-media .rafaela-full,.bio-media .book-full{height:auto!important;max-height:430px}
+@media(max-width:900px){
+  .hero-media.hero-rafaela img{height:auto;max-height:420px}
+}
+@media(max-width:620px){
+  .hero-media.hero-rafaela img{height:auto;max-height:360px}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+    <nav class="navlinks">
+      <a href="index.html#experiencias">Experiências</a>
+      <a href="index.html#agenda">Agenda</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#comprar">Garantir meu lugar</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Aprender Comendo</div>
+      <h1>Sabores das Ruas</h1>
+      <p class="lead">Antes do delivery, dos food trucks e das lanchonetes, quem alimentava as ruas das cidades brasileiras?</p>
+      <p class="intro">Nesta edição do <strong>Aprender Comendo</strong>, a historiadora <strong>Rafaela Basso</strong>, pesquisadora da história da alimentação, nos convida a percorrer as ruas do Brasil de outros tempos através da comida.</p>
+      <p class="intro">O que se comia? Quem preparava e vendia esses alimentos? Quem os comprava? E o que <strong>quitandas, tabuleiros, vendas, botequins e casas de pasto</strong> podem nos contar sobre a formação da vida urbana brasileira?</p>
+      <p class="intro">Aqui, porém, a história não passa apenas pelas palavras. <strong>Durante a aula, você experimenta uma empadinha de palmito conectada ao universo histórico que estamos conhecendo.</strong></p>
+
+      <div class="meta">
+        <span class="pill">17 SETEMBRO 2026 · 19H</span>
+        <span class="pill">1H30 DE EXPERIÊNCIA</span>
+        <span class="pill">GRUPO PEQUENO</span>
+      </div>
+      <div class="price">R$ 80 por pessoa</div>
+      <a class="btn" href="#comprar">Garantir meu lugar</a>
+
+      <div class="notice"><strong>Uma empadinha de palmito está incluída no bilhete.</strong> A experiência foi pensada para aproximar conhecimento histórico e experiência do paladar.</div>
+    </div>
+
+    <div class="hero-media hero-rafaela">
+      <img src="assets/rafaela-capa-reportagem.jpg" alt="Rafaela Basso em imagem sobre história da alimentação">
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Em poucos segundos</div>
+      <h2>O que você vai encontrar</h2>
+      <div class="grid4">
+        <article class="card">
+          <h3>Uma viagem pelas ruas do Brasil de outros tempos</h3>
+          <p>Vamos descobrir o que circulava por quitandas e tabuleiros e conhecer os espaços onde as pessoas compravam, vendiam, comiam e se encontravam.</p>
+        </article>
+        <article class="card">
+          <h3>As pessoas por trás da comida</h3>
+          <p>Mais do que uma história de pratos, vamos conhecer quem produzia e comercializava esses alimentos — com atenção especial ao protagonismo das mulheres no pequeno comércio ambulante.</p>
+        </article>
+        <article class="card">
+          <h3>Comer para compreender</h3>
+          <p>Uma empadinha de palmito está incluída no bilhete e participa da experiência como uma maneira de aproximar o conhecimento histórico da experiência do paladar.</p>
+        </article>
+        <article class="card">
+          <h3>Uma historiadora especialista no assunto</h3>
+          <p>O encontro é conduzido por Rafaela Basso, historiadora da Unicamp e autora de <em>Entre tabuleiros, balcões e fogões</em>.</p>
+        </article>
+      </div>
+
+      <div class="learn-feature">
+        <img class="book-full" src="assets/rafaela-livro.webp" alt="Capa do livro Entre tabuleiros, balcões e fogões, de Rafaela Basso">
+        <div>
+          <div class="section-kicker">A pesquisa que inspira o encontro</div>
+          <h3>Entre tabuleiros, balcões e fogões</h3>
+          <p>A experiência dialoga diretamente com a pesquisa de Rafaela Basso sobre a alimentação de rua na cidade de São Paulo entre 1765 e 1834 — um caminho para compreender como comida, trabalho, circulação e sociabilidade ajudaram a formar a vida urbana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">A pergunta central</div>
+        <h2>O que a comida de rua pode contar sobre uma cidade?</h2>
+        <p>Muito antes de ser tratada como tendência gastronômica, a comida de rua já fazia parte do cotidiano das cidades brasileiras.</p>
+        <p>Quitandas e tabuleiros colocavam alimentos em circulação. Vendas, botequins e casas de pasto eram lugares de alimentação, comércio e encontro. Por trás deles estavam trabalhadores e, de maneira marcante, <strong>mulheres que encontraram no pequeno comércio ambulante formas de atuação na vida econômica das cidades</strong>.</p>
+        <p class="pull">A história das cidades também pode ser contada pelo que se comia nas ruas.</p>
+        <p>Quem podia vender? Quem comprava? Onde se comia? Quem preparava a comida? Como esses alimentos circulavam pela cidade?</p>
+        <p>Ao acompanhar essas perguntas, a aula percorre as transformações dos hábitos alimentares e mostra como a comida de rua participou da própria configuração da <strong>vida urbana e de suas formas de sociabilidade</strong>.</p>
+      </div>
+      <div class="story-images">
+        <img class="rafaela-full" src="assets/rafaela-pesquisadora.jpg" alt="Rafaela Basso em atividade de pesquisa e ensino">
+        <img class="book-full" src="assets/rafaela-livro.webp" alt="Livro Entre tabuleiros, balcões e fogões">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">A proposta</div>
+      <h2>Por que Aprender Comendo?</h2>
+      <div class="story">
+        <div class="story-copy">
+          <p>Porque algumas coisas podem ser compreendidas também pelo paladar.</p>
+          <p>O <strong>Aprender Comendo</strong> é um formato da Paulistânia Desvairada que aproxima conhecimento e experiência sensorial. Cursos, aulas e conversas são acompanhados por alimentos escolhidos para estabelecer uma relação concreta com aquilo que está sendo discutido.</p>
+          <p>Nesta edição, enquanto percorremos a história da alimentação de rua, <strong>uma empadinha de palmito atravessa a fronteira entre aquilo que ouvimos e aquilo que provamos.</strong></p>
+          <p class="pull">Não é apenas uma aula com comida. A comida também é uma forma de conhecer.</p>
+        </div>
+        <figure class="room-photo" style="margin-top:0">
+          <img src="assets/salao-aprender-comendo.jpg" alt="Experiência em grupo na Paulistânia Desvairada">
+          <figcaption>Encontros em grupo pequeno, à mesa, na Paulistânia Desvairada.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Como funciona</div>
+      <h2>A noite em quatro movimentos</h2>
+      <div class="timeline">
+        <div class="step"><strong>01 · Chegada</strong><span>Você chega e se acomoda para um encontro em grupo pequeno.</span></div>
+        <div class="step"><strong>02 · Aula & conversa</strong><span>Rafaela conduz um percurso pela história da comida de rua no Brasil, com espaço para perguntas.</span></div>
+        <div class="step"><strong>03 · Empadinha de palmito</strong><span>Cada participante recebe uma empadinha de palmito, já incluída no valor do bilhete.</span></div>
+        <div class="step"><strong>04 · Novas perguntas</strong><span>O alimento ajuda a aproximar a discussão histórica da experiência concreta de comer.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap fit">
+      <div>
+        <div class="section-kicker">Para quem é</div>
+        <h2>Essa experiência é para você se...</h2>
+        <ul>
+          <li>tem curiosidade sobre a história da alimentação brasileira;</li>
+          <li>gosta de descobrir a história por caminhos menos óbvios;</li>
+          <li>se interessa pela formação das cidades e pela vida cotidiana de outras épocas;</li>
+          <li>quer entender quem estava por trás da produção e da venda de comida nas ruas;</li>
+          <li>acredita que comer também pode ser uma maneira de aprender;</li>
+          <li>ou simplesmente procura um programa cultural diferente em Campinas.</li>
+        </ul>
+      </div>
+      <aside class="info-box">
+        <h3>Você não precisa estudar história ou gastronomia.</h3>
+        <p>A experiência é aberta a qualquer pessoa interessada no tema.</p>
+        <p>A proposta não é uma aula acadêmica fechada: é um encontro para aprender, conversar e provar.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap bio">
+      <div class="bio-media">
+        <img class="rafaela-full" src="assets/rafaela-pesquisadora.jpg" alt="Rafaela Basso">
+        <img class="book-full" src="assets/rafaela-livro.webp" alt="Capa do livro de Rafaela Basso">
+      </div>
+      <div class="bio-copy">
+        <div class="section-kicker">Quem conduz</div>
+        <h2>Rafaela Basso</h2>
+        <p>Rafaela Basso é historiadora da <strong>Universidade Estadual de Campinas (Unicamp)</strong>, onde se graduou em História e realizou seu mestrado e doutorado.</p>
+        <p>É autora de <em>A cultura alimentar paulista: uma civilização do milho? 1650–1750</em> (Alameda, 2015) e <em>Entre tabuleiros, balcões e fogões: um estudo sobre a alimentação de rua na cidade de São Paulo (1765–1834)</em> (Alameda, 2022).</p>
+        <p>Possui artigos e capítulos de livros publicados na área de <strong>história da alimentação</strong> e foi professora da pós-graduação <em>Gastronomia: História e Cultura</em>, do Centro Universitário Senac-SP.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="buy">
+        <div>
+          <div class="section-kicker">Seu lugar à mesa</div>
+          <h2>Aprender Comendo — Sabores das Ruas</h2>
+          <p><strong>17 de setembro de 2026 · 19h</strong><br>Duração aproximada: <strong>1h30</strong><br>Paulistânia Desvairada · Restaurante Tio Dinho<br>Rua João Leone, 51 · Sousas · Campinas</p>
+          <p class="small"><strong>O bilhete inclui:</strong> participação no encontro + uma empadinha de palmito.</p>
+        </div>
+        <div class="buy-side">
+          <div class="price">R$ 80</div>
+          <p><strong>por pessoa</strong></p>
+          <a class="btn" href="checkout.html?experiencia=Sabores%20das%20ruas&categoria=Aprender%20Comendo&data=17/09/2026&bilhete=Bilhete%20individual&valor=80">Comprar bilhete — R$ 80</a>
+          <p class="small">Vagas limitadas. Este botão já marca o ponto de conversão da página e depois receberá o link real de pagamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-kicker">Dúvidas rápidas</div>
+      <h2>Antes de comprar</h2>
+      <details><summary>Preciso estudar alguma coisa antes?</summary><p>Não. A experiência é aberta a qualquer pessoa interessada no tema e não exige conhecimento prévio.</p></details>
+      <details><summary>A empadinha está incluída no ingresso?</summary><p>Sim. Cada participante recebe uma empadinha de palmito, incluída no valor de R$ 80.</p></details>
+      <details><summary>É uma aula ou uma experiência gastronômica?</summary><p>As duas dimensões se encontram. Há uma aula conduzida por Rafaela Basso, mas o alimento participa da proposta do Aprender Comendo como outra maneira de nos aproximarmos do assunto.</p></details>
+      <details><summary>Quanto tempo dura?</summary><p>A duração prevista é de aproximadamente 1h30.</p></details>
+      <details><summary>Posso participar mesmo sem estudar história ou gastronomia?</summary><p>Sim. O encontro foi pensado para um público amplo e interessado, não apenas para pesquisadores ou profissionais da área.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerline">
+    <span>© 2026 Paulistânia Desvairada</span>
+    <span>paulistaniadesvairada@gmail.com</span>
+  </div>
+</footer>
+
+<div class="sticky-buy">
+  <strong>17 SET · R$ 80</strong>
+  <a class="btn" href="#comprar">Garantir meu lugar</a>
+</div>
+</body>
+</html>

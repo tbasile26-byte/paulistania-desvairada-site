@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cozinhando Juntos — Empanadas | Paulistânia Desvairada</title>
+<meta name="description" content="Cozinhando Juntos: Empanadas — uma experiência intimista para aprender fazendo, conhecer pessoas, cozinhar e jantar junto. Bilhete Consciente.">
+<style>
+:root{
+  --ink:#111;
+  --muted:#666;
+  --line:#dedbd4;
+  --paper:#fbfaf7;
+  --accent:#e33b16;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{width:122px}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:800;text-transform:uppercase}
+.navlinks a:hover{color:var(--accent)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1.8px solid var(--accent);color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:.02em}
+.nav-cta{padding:12px 16px;font-size:12px}
+.btn{background:var(--accent);color:#fff;padding:16px 22px;border-radius:2px}
+.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center;padding:44px 0 30px}
+.eyebrow{font-size:13px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+h1{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,6vw,86px);line-height:.9;letter-spacing:-.03em;margin:0 0 20px}
+.lead{font-family:Georgia,serif;font-size:clamp(22px,2.4vw,33px);line-height:1.18;margin:0 0 22px;max-width:760px}
+.intro{font-size:18px;line-height:1.62;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 18px}
+.pill{border:1px solid #cfcac0;padding:10px 12px;font-weight:800;font-size:13px;background:#fff}
+.price{font-size:28px;font-weight:900;margin:8px 0 18px}
+.hero-media{background:#efeae2;display:flex;align-items:center;justify-content:center}
+.hero-media img{width:100%;height:auto;max-height:620px;object-fit:contain}
+.notice{margin:22px 0 0;border-left:4px solid var(--accent);padding:14px 16px;background:#fff;font-size:14px;line-height:1.45}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.section-kicker{font-size:12px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+h2{font-family:"Arial Narrow",Impact,sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,66px);line-height:.95;margin:0 0 24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:22px;min-height:245px}
+.card h3{margin:0 0 10px;font-size:20px}
+.card p{margin:0;line-height:1.55;color:#333}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+.story-copy p{font-family:Georgia,serif;font-size:20px;line-height:1.65;margin:0 0 18px}
+.pull{font-size:30px!important;line-height:1.23!important;font-weight:700}
+.story-images{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.story-images img{width:100%;height:auto;max-height:430px;object-fit:contain;background:#efeae2}
+.quote-band{background:#111;color:#fff;border-top:0;padding:72px 0}
+.quote-band blockquote{font-family:Georgia,serif;font-size:clamp(32px,5vw,60px);line-height:1.08;margin:0;max-width:1000px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);background:#fff}
+.step{padding:24px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step strong{display:block;color:var(--accent);font-size:12px;text-transform:uppercase;margin-bottom:8px}
+.fit{display:grid;grid-template-columns:1.1fr .9fr;gap:38px}
+.fit ul{margin:0;padding-left:20px;font-size:18px;line-height:1.7}
+.info-box{background:#111;color:#fff;padding:28px}
+.info-box h3{font-size:26px;margin:0 0 16px}
+.info-box p{margin:8px 0;line-height:1.5}
+.home-feature{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:center;background:#fff;border:1px solid var(--line);padding:18px}
+.home-feature img{width:100%;height:auto;max-height:500px;object-fit:contain;background:#efeae2}
+.home-feature h3{font-size:32px;margin:0 0 12px}
+.home-feature p{font-size:18px;line-height:1.6;margin:0 0 14px}
+.tickets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ticket{background:#fff;border:1px solid var(--line);padding:24px}
+.ticket h3{font-size:24px;margin:0 0 6px}
+.ticket .ticket-price{font-size:36px;font-weight:900;margin:6px 0 14px}
+.ticket p{line-height:1.55;color:#333}
+.ticket .btn{width:100%;margin-top:14px}
+.ticket.moderado{border:2px solid var(--accent)}
+.ticket.incentivo{border-top:4px solid #1e5f8a}
+.ticket.minimo{border-top:4px solid #d54b19}
+.buy-note{margin-top:18px;font-size:14px;line-height:1.55;color:#444}
+.faq details{border-top:1px solid var(--line);padding:18px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:800;cursor:pointer}
+.faq p{line-height:1.55;color:#333}
+footer{padding:36px 0 92px}
+.footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;text-transform:uppercase;font-weight:700}
+.sticky-buy{display:none}
+@media(max-width:1000px){
+  .timeline{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .navlinks{display:none}
+  .nav{height:70px}.logo{width:98px}
+  .hero,.story,.fit,.home-feature{grid-template-columns:1fr}
+  .hero{padding-top:28px}
+  .hero-media{order:-1}
+  .hero-media img{max-height:500px}
+  .grid4{grid-template-columns:1fr 1fr}
+  .tickets{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .sticky-buy{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#111;color:#fff;padding:10px 14px;align-items:center;justify-content:space-between;gap:12px}
+  .sticky-buy .btn{padding:12px 16px;white-space:nowrap}
+  .sticky-buy strong{font-size:14px}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 24px,1160px)}
+  h1{font-size:50px}
+  .lead{font-size:24px}
+  .intro{font-size:16px}
+  .grid4,.story-images{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+    <nav class="navlinks">
+      <a href="experiencias.html">Experiências</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="nav-cta" href="#comprar">Garantir meu lugar</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Cozinhando Juntos</div>
+      <h1>Empanadas</h1>
+      <p class="lead">Massa aberta sobre a mesa, recheios para combinar, mãos trabalhando e gente para conhecer.</p>
+      <p class="intro">O <strong>Cozinhando Juntos: Empanadas</strong> é uma experiência intimista para poucas pessoas, reunidas em volta de uma mesma mesa para cozinhar, conversar e jantar juntas.</p>
+      <p class="intro">Começamos entendendo a massa: textura, ponto, descanso e abertura. Depois entram os recheios, as combinações e uma das partes mais gostosas do processo — <strong>montar, fechar e dar forma a cada empanada com as próprias mãos</strong>.</p>
+      <p class="intro">Enquanto isso, a conversa acontece. Pessoas chegam sozinhas ou acompanhadas, dividem a bancada, trocam ideias, ajudam umas às outras e, pouco a pouco, deixam de ser desconhecidas.</p>
+      <p class="intro">No final, as empanadas vão ao forno e voltam para o centro da mesa.</p>
+
+      <div class="meta">
+        <span class="pill">24 NOVEMBRO 2026</span>
+        <span class="pill">SOUSAS · CAMPINAS</span>
+        <span class="pill">GRUPO PEQUENO</span>
+      </div>
+      <div class="price">Bilhete Consciente · R$ 90 · R$ 150 · R$ 180</div>
+      <a class="btn" href="#comprar">Escolher meu bilhete</a>
+      <div class="notice"><strong>Aprenda fazendo e leve a experiência para casa.</strong> Depois, você pode recriar o encontro com amigos e família.</div>
+    </div>
+
+    <div class="hero-media">
+      <img src="assets/empanadas-mesa-grupo.jpg" alt="Grupo reunido em torno da mesa durante o Cozinhando Juntos: Empanadas">
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Em poucos segundos</div>
+      <h2>O que você vai encontrar</h2>
+      <div class="grid4">
+        <article class="card">
+          <h3>Uma massa feita com as próprias mãos</h3>
+          <p>Vamos perceber textura, ponto e descanso e entender como abrir a massa para receber o recheio.</p>
+        </article>
+        <article class="card">
+          <h3>Recheios e combinações</h3>
+          <p>A experiência continua experimentando sabores e entendendo como construir uma empanada equilibrada.</p>
+        </article>
+        <article class="card">
+          <h3>O gesto de fechar</h3>
+          <p>Montar, dobrar e fazer o acabamento também fazem parte do aprendizado. Cada pessoa acompanha sua empanada ganhando forma diante dela.</p>
+        </article>
+        <article class="card">
+          <h3>Uma mesa para conhecer gente</h3>
+          <p>Cozinhar junto cria assunto com facilidade. A bancada vira espaço para conversar, trocar experiências e fazer novas conexões.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">Por que Cozinhando Juntos?</div>
+        <h2>A cozinha cria o encontro</h2>
+        <p>Algumas experiências ficam melhores quando o preparo vem para o centro da mesa.</p>
+        <p>No <strong>Cozinhando Juntos</strong>, todo mundo participa: pesa, mistura, abre, recheia, modela, pergunta, observa o que o outro está fazendo e compartilha pequenas descobertas durante o processo.</p>
+        <p>É também uma maneira muito natural de conhecer pessoas. A atividade tira o peso de “ter que puxar assunto”: há sempre alguma coisa acontecendo entre as mãos e alguma conversa surgindo ao redor dela.</p>
+        <p class="pull">A cozinha cria o encontro. A mesa prolonga a conversa.</p>
+        <p>Você pode vir com amigos, em casal ou sozinho.</p>
+      </div>
+      <div class="story-images">
+        <img src="assets/empanadas-recheio.jpg" alt="Recheio sendo colocado sobre a massa de empanada">
+        <img src="assets/empanadas-fechamento.jpg" alt="Participante fechando e modelando uma empanada">
+        <img src="assets/empanadas-thiago-ensina.jpg" alt="Orientação durante a oficina de empanadas">
+        <img src="assets/empanadas-prato.jpg" alt="Empanada pronta servida no prato">
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="wrap">
+      <blockquote>O que começou nas mãos <strong>termina no centro da mesa.</strong></blockquote>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap story">
+      <div class="story-copy">
+        <div class="section-kicker">Da massa ao forno</div>
+        <h2>Aprender fazendo, conversar preparando, jantar compartilhando</h2>
+        <p>Tudo começa com uma massa ainda sem forma.</p>
+        <p>Primeiro, trabalhamos textura, ponto e descanso. Depois, cada participante abre sua massa e começa a experimentar os recheios.</p>
+        <p>A partir daí, cada empanada vira uma pequena construção: quantidade de recheio, dobra, fechamento e acabamento.</p>
+        <p>Pouco a pouco, a bancada vai se enchendo.</p>
+        <p>Então elas seguem para o forno.</p>
+        <p class="pull">Aquilo que cada pessoa preparou individualmente volta como uma travessa para ser compartilhada por todos.</p>
+      </div>
+      <div>
+        <img src="assets/empanadas-assadas.jpg" alt="Empanadas assadas prontas para compartilhar" style="width:100%;height:auto;max-height:650px;object-fit:contain;background:#efeae2">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Como funciona</div>
+      <h2>A noite em cinco movimentos</h2>
+      <div class="timeline">
+        <div class="step"><strong>01 · Fazer a massa</strong><span>Entendemos ingredientes, textura, ponto e descanso.</span></div>
+        <div class="step"><strong>02 · Abrir</strong><span>Cada participante trabalha sua massa e aprende a chegar à espessura adequada.</span></div>
+        <div class="step"><strong>03 · Rechear</strong><span>Experimentamos combinações e pensamos o equilíbrio entre massa e recheio.</span></div>
+        <div class="step"><strong>04 · Fechar e modelar</strong><span>As empanadas ganham forma e acabamento pelas mãos de cada participante.</span></div>
+        <div class="step"><strong>05 · Assar e jantar</strong><span>Tudo vai ao forno e depois chega à mesa para um jantar compartilhado.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap fit">
+      <div>
+        <div class="section-kicker">Para quem é</div>
+        <h2>Essa experiência é para você se...</h2>
+        <ul>
+          <li>quer aprender a fazer empanadas em casa;</li>
+          <li>gosta de cozinhar, mas prefere aprender fazendo;</li>
+          <li>procura um programa gastronômico realmente participativo;</li>
+          <li>quer conhecer pessoas novas num ambiente descontraído;</li>
+          <li>gosta de conversar enquanto prepara alguma coisa com as mãos;</li>
+          <li>quer vir sozinho para uma atividade em que seja fácil se integrar;</li>
+          <li>procura algo gostoso para depois reproduzir com amigos ou família;</li>
+          <li>ou simplesmente quer passar uma noite cozinhando e comendo bem em grupo.</li>
+        </ul>
+      </div>
+      <aside class="info-box">
+        <h3>Você pode vir sozinho.</h3>
+        <p>Muita gente chega às experiências sem conhecer os outros participantes.</p>
+        <p>Como todo mundo trabalha em torno da mesma bancada, a integração acontece naturalmente durante o preparo.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap home-feature">
+      <img src="assets/empanadas-prato.jpg" alt="Empanada pronta">
+      <div>
+        <div class="section-kicker">Leve a experiência para casa</div>
+        <h3>Mais do que uma receita, um jeito de reunir pessoas</h3>
+        <p>Empanada é uma comida especialmente boa para compartilhar.</p>
+        <p>Depois de entender a massa, os recheios e o fechamento, você pode reproduzir o processo em casa e transformar o preparo em um programa: colocar os ingredientes sobre a mesa, chamar amigos ou família e deixar que cada pessoa monte a sua.</p>
+        <p><strong>Mais do que aprender uma receita, você aprende um jeito de reunir pessoas em volta da cozinha.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="wrap">
+      <div class="section-kicker">Bilhete Consciente</div>
+      <h2>Você escolhe quanto pagar</h2>
+      <p style="font-size:18px;line-height:1.6;max-width:850px;margin-bottom:28px">A experiência é a mesma para todos. Você escolhe o valor de acordo com sua realidade e com o quanto deseja apoiar a continuidade do projeto.</p>
+
+      <div class="tickets">
+        <article class="ticket minimo">
+          <h3>Mínimo</h3>
+          <div class="ticket-price">R$ 90</div>
+          <p>Cobre o básico necessário para que a experiência aconteça e garante sua participação.</p>
+          <a class="btn" href="checkout.html?experiencia=Empanadas&categoria=Cozinhando Juntos&data=24/11/2026&bilhete=Bilhete%20Consciente&valor=90" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Mínimo — R$ 90.'); return false;">Escolher R$ 90</a>
+        </article>
+
+        <article class="ticket moderado">
+          <h3>Moderado</h3>
+          <div class="ticket-price">R$ 150</div>
+          <p>Um valor mais equilibrado, que ajuda a sustentar o projeto e suas próximas experiências.</p>
+          <a class="btn" href="checkout.html?experiencia=Empanadas&categoria=Cozinhando Juntos&data=24/11/2026&bilhete=Bilhete%20Consciente&valor=150" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Moderado — R$ 150.'); return false;">Escolher R$ 150</a>
+        </article>
+
+        <article class="ticket incentivo">
+          <h3>Incentivo</h3>
+          <div class="ticket-price">R$ 180</div>
+          <p>Para quem pode contribuir um pouco mais e fortalecer a continuidade do Cozinhando Juntos.</p>
+          <a class="btn" href="checkout.html?experiencia=Empanadas&categoria=Cozinhando Juntos&data=24/11/2026&bilhete=Bilhete%20Consciente&valor=180" data-old-onclick="alert('Aqui entra o link de pagamento do Bilhete Incentivo — R$ 180.'); return false;">Escolher R$ 180</a>
+        </article>
+      </div>
+
+      <p class="buy-note"><strong>24 de novembro de 2026</strong> · Paulistânia Desvairada / Restaurante Tio Dinho · Rua João Leone, 51 · Sousas · Campinas.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-kicker">Dúvidas rápidas</div>
+      <h2>Antes de comprar</h2>
+      <details><summary>Preciso saber cozinhar?</summary><p>Não. O aprendizado acontece pela prática, com orientação ao longo do processo.</p></details>
+      <details><summary>Posso ir sozinho?</summary><p>Sim. O grupo pequeno e a própria dinâmica de cozinhar junto facilitam muito a integração entre as pessoas.</p></details>
+      <details><summary>O jantar está incluído?</summary><p>Sim. O grupo assa e depois janta junto as empanadas preparadas durante a experiência.</p></details>
+      <details><summary>Qual a diferença entre os valores do Bilhete Consciente?</summary><p>A experiência é a mesma para todos. O valor mínimo cobre o básico da produção; o moderado ajuda a sustentar o projeto e suas próximas experiências; e o incentivo fortalece ainda mais a continuidade do Cozinhando Juntos.</p></details>
+      <details><summary>Posso levar minha própria bebida?</summary><p>Sim. Também vendemos bebidas no local. Se preferir trazer a sua, cobramos <strong>taxa de rolha de R$ 25 por garrafa</strong>.</p></details>
+      <details><summary>Consigo reproduzir isso em casa depois?</summary><p>Sim. A proposta é que você saia entendendo o processo o suficiente para recriar a experiência em casa com amigos ou família.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerline">
+    <span>© 2026 Paulistânia Desvairada</span>
+    <span>paulistaniadesvairada@gmail.com</span>
+  </div>
+</footer>
+
+<div class="sticky-buy">
+  <strong>24 NOV · A PARTIR DE R$ 90</strong>
+  <a class="btn" href="#comprar">Escolher bilhete</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cozinhando Juntos — Biscoitos de Natal | Paulistânia Desvairada</title>
+<meta name="description" content="Oficina de Biscoitos com Cris Wiik — Especial de Natal. Uma experiência para colocar as mãos na massa, aprender e criar presentes comestíveis.">
+<style>
+:root{--ink:#171717;--paper:#f7f3ea;--white:#fff;--orange:#e75b2b;--gold:#d6a23a;--line:#d9d1c2;--muted:#68635b}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);background:var(--paper);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+a{color:inherit;text-decoration:none} img{display:block;width:100%}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{background:#fff;border-bottom:1px solid #e9e3d9;position:sticky;top:0;z-index:20}
+.nav{min-height:88px;display:flex;align-items:center;gap:28px} .logo{width:145px;height:auto} .wordmark{font:bold 18px Arial,sans-serif;line-height:1}
+nav{margin-left:auto;display:flex;gap:20px;font:700 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:14px 19px;border:2px solid var(--orange);font:800 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.07em;cursor:pointer}
+.btn.outline{background:transparent;color:var(--orange)}
+.hero{background:#fff;padding:48px 0 54px} .hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:46px;align-items:center}
+.kicker{font:800 12px Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--orange);margin-bottom:12px}
+h1,h2,h3{margin:0;line-height:.96} h1{font:900 clamp(48px,7vw,92px) Arial,sans-serif;text-transform:uppercase;letter-spacing:-.06em}
+h1 span{display:block;color:var(--orange)} .lead{font-size:21px;max-width:620px;margin:24px 0}
+.meta{border-top:1px solid var(--line);padding-top:17px;margin-top:24px;font:700 14px Arial,sans-serif;line-height:1.8}
+.hero-photo{height:650px;object-fit:cover;object-position:center}
+section{padding:78px 0} .cream{background:#efe7d8} .white{background:#fff} .dark{background:#151515;color:#fff}
+.section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;margin-bottom:42px}
+.section-head h2{font:900 clamp(34px,5vw,64px) Arial,sans-serif;text-transform:uppercase;letter-spacing:-.045em}
+.section-head p{font-size:19px;margin:0;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px} .card{border-top:4px solid var(--orange);padding-top:17px}
+.card b{display:block;font:800 17px Arial,sans-serif;margin-bottom:8px} .card p{margin:0;color:#504c45}
+.quote{font:italic clamp(28px,4vw,54px) Georgia,serif;max-width:900px;line-height:1.15;margin:auto;text-align:center}
+.gallery{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:12px} .gallery img{height:420px;object-fit:cover}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center} .split img{height:560px;object-fit:cover}
+.copy h2{font:900 clamp(36px,5vw,66px) Arial,sans-serif;text-transform:uppercase;letter-spacing:-.045em;margin-bottom:25px} .copy p{font-size:18px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:14px} .step{background:#fff;color:#171717;padding:24px;min-height:205px}
+.step:before{counter-increment:s;content:"0" counter(s);display:block;color:var(--orange);font:900 30px Arial,sans-serif;margin-bottom:25px}
+.step b{font:800 16px Arial,sans-serif} .step p{font-size:14px}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:42px} .fit ul{padding-left:20px;font-size:18px} .fit li{margin:10px 0}
+.ticket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:34px 0} .ticket{border:1px solid #3b3b3b;padding:25px}
+.ticket strong{font:900 26px Arial,sans-serif;text-transform:uppercase} .price{font:900 42px Arial,sans-serif;color:#f28a57;margin:12px 0}
+.buy{background:#fff;color:#171717;padding:18px;display:block;text-align:center;font:900 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.note{font-size:14px;color:#d3d3d3}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:30px;border-top:1px solid #555;padding-top:28px;margin-top:45px}
+.info b{font-family:Arial,sans-serif}
+footer{background:#0c0c0c;color:#aaa;padding:30px 0;font:12px Arial,sans-serif}
+@media(max-width:850px){
+ nav{display:none} .nav{min-height:72px} .hero-grid,.section-head,.split,.fit{grid-template-columns:1fr} .hero-photo{height:430px}
+ .cards{grid-template-columns:1fr 1fr} .gallery{grid-template-columns:1fr 1fr} .gallery img{height:300px} .gallery img:first-child{grid-column:1/-1}
+ .steps{grid-template-columns:1fr 1fr} .ticket-grid{grid-template-columns:1fr} .info{grid-template-columns:1fr}
+}
+@media(max-width:520px){.wrap{width:min(100% - 26px,1160px)} h1{font-size:52px} .cards,.steps,.gallery{grid-template-columns:1fr} .gallery img:first-child{grid-column:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada">
+<nav><a href="#experiencia">A experiência</a><a href="#cris">Cris Wiik</a><a href="#como">Como funciona</a><a href="#bilhetes">Bilhetes</a></nav>
+<a class="btn outline" href="#bilhetes">Garantir meu lugar</a></div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<div class="kicker">Cozinhando Juntos · Especial de Natal</div>
+<h1>Biscoitos <span>de Natal</span></h1>
+<p class="lead">Uma experiência para colocar as mãos na massa, sentir o cheiro das especiarias e começar o Natal fazendo presentes.</p>
+<div class="meta">01 DEZ 2026 · duração aproximada de 3 horas<br>Paulistânia Desvairada · Restaurante Tio Dinho · Sousas, Campinas<br>com Cris Wiik</div>
+<p><a class="btn" href="#bilhetes">Escolher meu bilhete</a></p>
+</div>
+<img class="hero-photo" src="assets/IMG_1819.jpg" alt="Participantes preparando biscoitos em uma mesa coletiva">
+</div></section>
+
+<section id="experiencia" class="cream"><div class="wrap">
+<div class="section-head"><h2>Natal feito à mão</h2><p>Nesta edição especial do <b>Cozinhando Juntos</b>, recebemos a chef <b>Cris Wiik</b> para uma oficina dedicada a dois clássicos das festas de fim de ano: <b>biscoitinhos de gengibre e lua de mel</b>. Vamos aprender fazendo, conversando e compartilhando a mesa.</p></div>
+<div class="cards">
+<div class="card"><b>Dois biscoitos para aprender</b><p>Massas, especiarias, textura, formato e forno.</p></div>
+<div class="card"><b>Três horas de mão na massa</b><p>Um grupo pequeno acompanhando todo o processo de perto.</p></div>
+<div class="card"><b>Cheiro de Natal</b><p>Gengibre, mel, especiarias e biscoitos assando.</p></div>
+<div class="card"><b>Presentes feitos por você</b><p>Tudo o que produzirmos será embalado como lembrancinha de Natal.</p></div>
+</div></div></section>
+
+<section class="white"><div class="wrap gallery">
+<img src="assets/IMG_1802.jpg" alt="Oficina coletiva de biscoitos">
+<img src="assets/IMG_1828.jpg" alt="Bandeja de biscoitos antes de assar">
+<img src="assets/IMG_1830.jpg" alt="Biscoitos natalinos assados">
+</div></section>
+
+<section class="dark"><div class="wrap"><div class="quote">“O presente começa antes de ser embalado: começa no tempo dedicado a fazê-lo.”</div></div></section>
+
+<section class="white"><div class="wrap split">
+<div class="copy"><div class="kicker">Por que Cozinhando Juntos?</div><h2>O preparo vira programa</h2>
+<p>Em vez de chegar apenas para comer, você participa do processo. As pessoas dividem bancada, utensílios, descobertas e conversa enquanto alguma coisa vai sendo construída pelas próprias mãos.</p>
+<p>É também uma oportunidade de <b>conhecer gente nova</b>, trocar histórias e criar conexões em torno da mesa. O encontro faz parte da experiência tanto quanto a receita.</p>
+<p>E aquilo que fazemos juntos na Paulistânia pode depois ganhar novas mesas: você aprende uma preparação que pode <b>repetir em casa com amigos e família</b>.</p>
+<p><b>A experiência acontece aqui. O ritual pode continuar na sua casa.</b></p>
+</div><img src="assets/IMG_1807.jpg" alt="Participantes reunidos durante oficina"></div></section>
+
+<section id="cris" class="cream"><div class="wrap split">
+<img src="assets/IMG_1825.jpg" alt="Cris Wiik conduzindo oficina de biscoitos">
+<div class="copy"><div class="kicker">Quem conduz</div><h2>Cris Wiik</h2>
+<p>Cris conduz a oficina de maneira próxima e prática, acompanhando os participantes durante a preparação dos biscoitos e compartilhando técnicas, percepções e pequenos cuidados que fazem diferença no resultado.</p>
+<p>A proposta é aprender fazendo, num ambiente leve e coletivo, para que cada pessoa compreenda o processo e depois tenha autonomia para reproduzi-lo.</p>
+</div></div></section>
+
+<section id="como" class="dark"><div class="wrap">
+<div class="section-head"><h2>Como funciona</h2><p>Do primeiro contato com a massa até a embalagem das lembrancinhas, você participa de todo o percurso.</p></div>
+<div class="steps">
+<div class="step"><b>Conhecer as massas</b><p>Ingredientes, proporções, textura e os cuidados de cada preparação.</p></div>
+<div class="step"><b>Colocar as mãos na massa</b><p>O grupo prepara os biscoitinhos de gengibre e lua de mel.</p></div>
+<div class="step"><b>Abrir, cortar e modelar</b><p>Entram os formatos, os cortadores e a criatividade.</p></div>
+<div class="step"><b>Assar e provar</b><p>Os biscoitos seguem para o forno e o aroma toma conta do espaço.</p></div>
+<div class="step"><b>Embalar</b><p>A produção vira lembrancinhas natalinas para levar para casa.</p></div>
+</div></div></section>
+
+<section class="white"><div class="wrap fit">
+<div class="copy"><div class="kicker">Para quem é</div><h2>Venha como você é</h2>
+<ul><li>Para quem gosta de cozinhar e quer um programa diferente de fim de ano.</li><li>Para quem quer aprender receitas para repetir em outros Natais.</li><li>Para quem procura uma atividade para fazer com alguém da família.</li><li>Para quem gosta de presentes feitos à mão.</li><li>Para quem quer conhecer pessoas num ambiente descontraído e acolhedor.</li><li>Não é necessário ter experiência prévia na cozinha.</li></ul></div>
+<div class="copy"><div class="kicker">Depois da oficina</div><h2>Leve o ritual para casa</h2>
+<p>Depois de entender as massas e o processo, você pode transformar a preparação dos biscoitos em um programa familiar: colocar todo mundo em volta da mesa, separar cortadores, escolher embalagens e fazer juntos os presentes daquele ano.</p>
+<p>Com o tempo, uma receita pode virar <b>uma tradição da sua própria família</b>.</p>
+<p><b>Crianças podem participar acompanhadas por um adulto responsável.</b></p></div>
+</div></section>
+
+<section id="bilhetes" class="dark"><div class="wrap">
+<div class="section-head"><h2>Bilhete Consciente</h2><p>A experiência é a mesma para todo mundo. Você escolhe o valor de acordo com sua realidade e com o quanto deseja apoiar a continuidade do projeto.</p></div>
+<div class="ticket-grid">
+<div class="ticket"><strong>Mínimo</strong><div class="price">R$ 120</div><p>Cobre o básico necessário para a realização da experiência.</p><a class="buy" href="#" onclick="comprar('120');return false">Escolher mínimo</a></div>
+<div class="ticket"><strong>Moderado</strong><div class="price">R$ 150</div><p>Um valor mais equilibrado, que ajuda a sustentar o projeto e suas próximas experiências.</p><a class="buy" href="#" onclick="comprar('150');return false">Escolher moderado</a></div>
+<div class="ticket"><strong>Incentivo</strong><div class="price">R$ 180</div><p>Para quem pode contribuir um pouco mais e fortalecer a continuidade do Cozinhando Juntos.</p><a class="buy" href="#" onclick="comprar('180');return false">Escolher incentivo</a></div>
+</div>
+<div class="info">
+<div><b>01 de dezembro de 2026</b><br>Duração aproximada: 3 horas<br>Paulistânia Desvairada · Restaurante Tio Dinho<br>Rua João Leone, 51 · Sousas · Campinas</div>
+<div><b>Bebidas</b><br>Vendemos bebidas no local. Caso prefira trazer sua própria garrafa, a taxa de rolha é de <b>R$ 25 por garrafa</b>.</div>
+</div>
+<p class="note">Restrições alimentares devem ser informadas no ato da compra pelo e-mail paulistaniadesvairada@gmail.com. O cardápio poderá sofrer alterações sem aviso prévio.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 PAULISTÂNIA DESVAIRADA · paulistaniadesvairada@gmail.com</div></footer>
+<script>
+function comprar(valor){
+ const tipo = valor === "120" ? "Mínimo" : (valor === "150" ? "Moderado" : "Incentivo");
+ window.location.href = "checkout.html?experiencia=Biscoitos%20de%20Natal&categoria=Cozinhando%20Juntos&data=01/12/2026&bilhete="+encodeURIComponent(tipo)+"&valor="+valor;
+}
+</script>
+</body></html>

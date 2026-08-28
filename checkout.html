@@ -1,0 +1,154 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compra | Paulistânia Desvairada</title><meta name="description" content="Formulário de reserva e pagamento das experiências da Paulistânia Desvairada."><style>
+:root{--ink:#111;--paper:#fbfaf7;--orange:#e64218;--line:#ddd7cd;--muted:#666;--soft:#f1ece4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{height:82px;display:flex;align-items:center;gap:24px}.logo{width:120px;height:auto}
+.navlinks{margin-left:auto;display:flex;gap:24px;align-items:center;font-size:12px;font-weight:900;text-transform:uppercase}
+.navlinks a:hover,.active{color:var(--orange)}
+.navcta{border:1.5px solid var(--orange);color:var(--orange);padding:11px 14px;font-size:11px;font-weight:900;text-transform:uppercase}
+.hero{padding:52px 0 48px;background:#fff}.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:center}
+.eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);margin-bottom:12px}
+h1,h2,h3{margin-top:0}h1{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:clamp(48px,6vw,82px);line-height:.94;letter-spacing:-.025em;margin-bottom:18px}
+h2{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:clamp(34px,4.6vw,60px);line-height:.98;margin-bottom:22px}
+h3{font-size:22px}.lead{font-family:Georgia,serif;font-size:clamp(21px,2.1vw,30px);line-height:1.25;margin:0 0 18px}
+.hero p,.copy p{font-size:18px;line-height:1.62}.heroimg{width:100%;height:520px;object-fit:cover;background:#eee8de}
+section{padding:66px 0;border-top:1px solid var(--line)}.white{background:#fff}.dark{background:#111;color:#fff}.soft{background:var(--soft)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);padding:22px}.dark .card{background:#191919;border-color:#333}
+.card p{line-height:1.55;color:#3f3b36}.dark .card p{color:#ddd}
+.tag{display:inline-block;color:var(--orange);font-weight:900;text-transform:uppercase;font-size:11px;letter-spacing:.08em;margin-bottom:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);border:1px solid var(--orange);color:#fff;padding:14px 18px;font-size:12px;font-weight:900;text-transform:uppercase}
+.btn.ghost{background:transparent;color:var(--orange)}
+.quote{font-family:Georgia,serif;font-size:clamp(30px,4.8vw,58px);line-height:1.1;margin:0;max-width:980px}
+.list{font-size:18px;line-height:1.65;padding-left:20px}
+.faq details{padding:18px 0;border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{font-weight:900;cursor:pointer;font-size:17px}.faq p{font-size:16px;line-height:1.6;color:#444}
+.notice{border-left:4px solid var(--orange);background:#fff;padding:16px 18px;line-height:1.55}
+.footer{padding:36px 0;font-size:12px;text-transform:uppercase;font-weight:800}.footerline{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.category-card{padding:0;overflow:hidden}.category-card img{width:100%;height:250px;object-fit:cover}.category-card .body{padding:20px}.category-card h3{font-size:20px;text-transform:uppercase;line-height:1.05}
+.media-placeholder{min-height:210px;display:flex;flex-direction:column;justify-content:flex-end}
+.policy h3{margin-top:30px}.policy p,.policy li{font-size:17px;line-height:1.65}
+.contact-box{font-size:20px;line-height:1.8}
+.checkout{max-width:840px}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin:0 0 16px}
+label{display:block;font-size:12px;font-weight:900;text-transform:uppercase;margin-bottom:7px}
+input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;background:#fff;font:16px Arial,sans-serif}textarea{min-height:110px}
+.summarybox{background:#111;color:#fff;padding:24px;margin-bottom:24px}.summarybox strong{font-size:26px}
+.paychoices{display:grid;grid-template-columns:1fr 1fr;gap:14px}.paychoice{border:1px solid var(--line);background:#fff;padding:18px}
+.small{font-size:13px;color:var(--muted);line-height:1.5}.dark .small{color:#bbb}
+@media(max-width:900px){.navlinks{display:none}.nav{height:70px}.logo{width:98px}.hero-grid,.grid2,.grid3,.grid4,.formrow,.paychoices{grid-template-columns:1fr}.heroimg{height:420px}}
+@media(max-width:620px){.wrap{width:min(100% - 24px,1160px)}section{padding:48px 0}.hero{padding-top:28px}.heroimg{height:330px}}
+</style></head><body>
+<header><div class="wrap nav">
+<a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+<nav class="navlinks">
+<a href="experiencias.html">Experiências</a>
+<a href="agenda.html">Agenda</a>
+<a href="sobre.html">Sobre</a>
+<a href="na-midia.html">Na mídia</a>
+<a href="perguntas-frequentes.html">Perguntas frequentes</a>
+<a href="politica-de-compras.html">Política de compras</a>
+<a href="contato.html">Contato</a>
+</nav>
+<a class="navcta" href="index.html#agenda">Ver programação</a>
+</div></header>
+<main><section class="hero"><div class="wrap checkout"><div class="eyebrow">Compra</div><h1>Seu lugar à mesa</h1><p class="lead">Preencha seus dados. Depois você escolhe a forma de pagamento.</p></div></section>
+<section class="white"><div class="wrap checkout">
+<div class="summarybox"><div id="sumCat" class="eyebrow">Experiência</div><strong id="sumTitle">Selecione uma experiência</strong><p id="sumMeta">Os dados da experiência serão preenchidos automaticamente pelo botão de compra.</p></div>
+
+<div class="notice" style="margin:0 0 24px">
+<strong>Importante:</strong> o preenchimento do formulário registra a solicitação de reserva, mas <strong>a vaga só é garantida após a confirmação do pagamento</strong>.
+</div>
+
+<form id="reservaForm">
+<div class="formrow"><div class="field"><label>Nome completo *</label><input name="nome" required></div><div class="field"><label>E-mail *</label><input type="email" name="email" required></div></div>
+<div class="formrow"><div class="field"><label>WhatsApp *</label><input name="whatsapp" required></div><div class="field"><label>Instagram</label><input name="instagram"></div></div>
+<div class="formrow"><div class="field"><label>Quantidade de lugares *</label><input type="number" name="quantidade" min="1" value="1" required></div><div class="field"><label>Restrição alimentar?</label><select name="tem_restricao"><option>Não</option><option>Sim</option></select></div></div>
+<div class="field"><label>Se sim, qual?</label><input name="restricao"></div>
+<div class="field"><label>Observações</label><textarea name="observacoes"></textarea></div>
+<div class="field"><label><input style="width:auto;margin-right:8px" type="checkbox" required> Li as informações da experiência e a Política de Compras.</label></div>
+
+<h3>Forma de pagamento</h3>
+<div class="paychoices">
+<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="cielo" checked> <strong>Cartão · Cielo</strong><br><span class="small">Você será encaminhado ao link de pagamento da experiência.</span></label>
+<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="pix"> <strong>Pix</strong><br><span class="small">Chave: paulistaniadesvairada@gmail.com</span></label>
+</div>
+<p><button class="btn" type="submit">Registrar reserva e continuar</button></p>
+<p class="small">Seus dados serão registrados para identificação da reserva. A vaga só é confirmada após a confirmação do pagamento.</p>
+</form>
+</div></section></main>
+<script>
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx-MNgoT6LdavOZ9CiY4MnoBAYWab8KUnQAQVdGggbZOXaKkqOa4FpTVwhurwIGgp1aHQ/exec";
+const PIX_KEY = "paulistaniadesvairada@gmail.com";
+const CIELO = {
+  "Réquiem para um sonho|Bilhete individual|30":"https://cielolink.com.br/4gpzGNd",
+  "Sabores das ruas|Bilhete individual|80":"https://cielolink.com.br/4cbYtBZ",
+  "Trilhos e Temperos|Bilhete individual|160":"https://cielolink.com.br/4cKDrdO"
+};
+const CIELO_POR_VALOR = {
+  "90":"https://cielolink.com.br/4y7lDSu",
+  "120":"https://cielolink.com.br/4zHMoyx",
+  "150":"https://cielolink.com.br/4xlhz0R",
+  "180":"https://cielolink.com.br/4zKefhv"
+};
+
+const p = new URLSearchParams(location.search);
+const dados = {
+  experiencia: p.get("experiencia") || "",
+  categoria: p.get("categoria") || "",
+  data: p.get("data") || "",
+  bilhete: p.get("bilhete") || "",
+  valor: p.get("valor") || ""
+};
+document.getElementById("sumCat").textContent = dados.categoria || "Experiência";
+document.getElementById("sumTitle").textContent = dados.experiencia || "Selecione uma experiência";
+document.getElementById("sumMeta").textContent = [dados.data, dados.bilhete, dados.valor ? "R$ "+dados.valor : ""].filter(Boolean).join(" · ") || "Os dados serão preenchidos automaticamente pelo botão de compra.";
+
+document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
+ e.preventDefault();
+ const form = Object.fromEntries(new FormData(e.currentTarget).entries());
+ const payload = {
+   ...dados,
+   ...form,
+   origem:"Site",
+   status_reserva:"Aguardando pagamento",
+   situacao_pagamento:"Não pago",
+   forma_pagamento: form.pagamento === "cielo" ? "Cartão · Cielo" : "Pix"
+ };
+ const endpointAtivo = APPS_SCRIPT_URL && APPS_SCRIPT_URL.startsWith("https://script.google.com/");
+ if(!endpointAtivo){
+   alert("A integração com a planilha ainda precisa ser ativada. Entre em contato com a Paulistânia Desvairada.");
+   return;
+ }
+ try{
+   await fetch(APPS_SCRIPT_URL,{
+     method:"POST",
+     mode:"no-cors",
+     keepalive:true,
+     headers:{"Content-Type":"text/plain;charset=utf-8"},
+     body:JSON.stringify(payload)
+   });
+ }catch(err){
+   console.error(err);
+   alert("Não foi possível registrar seus dados. Tente novamente.");
+   return;
+ }
+ if(form.pagamento==="pix"){
+   try{await navigator.clipboard.writeText(PIX_KEY)}catch(e){}
+   alert("Reserva registrada. Chave Pix: "+PIX_KEY+"\n\nApós o pagamento, envie o comprovante conforme as orientações que definiremos na revisão final.");
+ }else{
+   const key=[dados.experiencia,dados.bilhete,dados.valor].join("|");
+   const destino = CIELO[key] || CIELO_POR_VALOR[dados.valor];
+   if(destino) location.href=destino;
+   else alert("Não encontramos o link de pagamento desta opção. Entre em contato com a Paulistânia Desvairada.");
+ }
+});
+</script>
+<footer class="footer"><div class="wrap footerline">
+<span>© 2026 Paulistânia Desvairada</span>
+<span>paulistaniadesvairada@gmail.com · (11) 97179-9889</span>
+</div></footer>
+</body></html>

@@ -74,7 +74,7 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 <h3>Forma de pagamento</h3>
 <div class="paychoices">
 <label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="cielo" checked> <strong>Cartão · Cielo</strong><br><span class="small">Você será encaminhado ao link de pagamento da experiência.</span></label>
-<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="pix"> <strong>Pix</strong><br><span class="small">Chave: paulistaniadesvairada@gmail.com</span></label>
+<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="pix"> <strong>Pix</strong><br><span class="small">Chave: paulistaniadesvairada@gmail.com</span><br><button type="button" id="copyPixBtn" style="margin-top:10px;padding:9px 12px;border:1px solid #161616;background:#fff;cursor:pointer;font-weight:700">Copiar chave Pix</button></label>
 </div>
 <p><button class="btn" type="submit">Registrar reserva e continuar</button></p>
 <p class="small">Seus dados serão registrados para identificação da reserva. A vaga só é confirmada após a confirmação do pagamento.</p>
@@ -94,6 +94,20 @@ const CIELO_POR_VALOR = {
   "150":"https://cielolink.com.br/4xlhz0R",
   "180":"https://cielolink.com.br/4zKefhv"
 };
+
+const copyPixBtn=document.getElementById("copyPixBtn");
+if(copyPixBtn){
+ copyPixBtn.addEventListener("click", async ()=>{
+   try{
+     await navigator.clipboard.writeText(PIX_KEY);
+     const original=copyPixBtn.textContent;
+     copyPixBtn.textContent="Chave copiada ✓";
+     setTimeout(()=>copyPixBtn.textContent=original,2200);
+   }catch(err){
+     window.prompt("Copie a chave Pix:", PIX_KEY);
+   }
+ });
+}
 
 const p = new URLSearchParams(location.search);
 const dados = {

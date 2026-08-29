@@ -205,10 +205,9 @@ footer{border-top:1px solid var(--line);padding:24px 0 38px;font-size:11px}.foot
       <input name="nome" autocomplete="name" placeholder="Nome" required>
       <input name="email" type="email" autocomplete="email" placeholder="E-mail" required>
       <input name="whatsapp" type="tel" autocomplete="tel" placeholder="WhatsApp" required>
-      <button id="mailingSubmit" type="submit">Cadastrar</button>
+      <button id="mailingSubmit" type="submit">Cadastrar e entrar na comunidade</button>
     </form>
     <p id="mailingStatus" role="status" aria-live="polite" style="display:none;font-family:'Courier New',monospace;font-size:12px;line-height:1.5;margin:14px 0 0"></p>
-    <a id="communityBtn" href="https://chat.whatsapp.com/KIaZDdHoSqqCHn8lHJwYQZ" target="_blank" rel="noopener" style="display:none;margin-top:14px;padding:14px;background:#1d5f49;color:#fff;font-weight:900;text-transform:uppercase;text-align:center;font-family:Arial,sans-serif;font-size:12px">Entrar na comunidade da Paulistânia Desvairada e do Tio Dinho</a>
     <small style="display:block;margin-top:12px;font-family:'Courier New',monospace;line-height:1.4">Ao se cadastrar, você autoriza o envio de informações sobre a programação da Paulistânia Desvairada e do Tio Dinho pelos contatos informados.</small>
   </div>
 </section>
@@ -313,7 +312,7 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
   if(!form) return;
   const btn = document.getElementById('mailingSubmit');
   const status = document.getElementById('mailingStatus');
-  const communityBtn = document.getElementById('communityBtn');
+  const COMMUNITY_URL = 'https://chat.whatsapp.com/KIaZDdHoSqqCHn8lHJwYQZ';
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
@@ -330,7 +329,6 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
     btn.textContent = 'Cadastrando...';
     status.style.display = 'block';
     status.textContent = 'Registrando seu contato...';
-    communityBtn.style.display = 'none';
 
     try {
       await fetch(APPS_SCRIPT_SITE, {
@@ -340,15 +338,16 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
         headers: {'Content-Type':'text/plain;charset=utf-8'},
         body: JSON.stringify(payload)
       });
-      status.textContent = 'Cadastro enviado. Agora você já pode entrar na comunidade.';
-      communityBtn.style.display = 'block';
+      status.textContent = 'Cadastro realizado! Agora você será direcionado para a comunidade da Paulistânia Desvairada e do Tio Dinho no WhatsApp.';
       form.reset();
+      btn.textContent = 'Cadastro realizado';
+      setTimeout(() => { window.location.href = COMMUNITY_URL; }, 1400);
     } catch(err) {
       console.error(err);
       status.textContent = 'Não foi possível enviar seu cadastro. Tente novamente ou fale conosco pelo WhatsApp.';
     } finally {
       btn.disabled = false;
-      btn.textContent = 'Cadastrar';
+      if (!status.textContent.startsWith('Cadastro realizado!')) btn.textContent = 'Cadastrar e entrar na comunidade';
     }
   });
 })();

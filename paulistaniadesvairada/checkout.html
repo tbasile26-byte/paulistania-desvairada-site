@@ -41,9 +41,23 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 .small{font-size:13px;color:var(--muted);line-height:1.5}.dark .small{color:#bbb}
 @media(max-width:900px){.navlinks{display:none}.nav{height:70px}.logo{width:98px}.hero-grid,.grid2,.grid3,.grid4,.formrow,.paychoices{grid-template-columns:1fr}.heroimg{height:420px}}
 @media(max-width:620px){.wrap{width:min(100% - 24px,1160px)}section{padding:48px 0}.hero{padding-top:28px}.heroimg{height:330px}}
-</style></head><body>
+</style>
+<link rel="canonical" href="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/checkout.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Paulistânia Desvairada">
+<meta property="og:title" content="Compra | Paulistânia Desvairada">
+<meta property="og:description" content="Formulário de reserva e pagamento das experiências da Paulistânia Desvairada.">
+<meta property="og:url" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/checkout.html">
+<meta property="og:image" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compra | Paulistânia Desvairada">
+<meta name="twitter:description" content="Formulário de reserva e pagamento das experiências da Paulistânia Desvairada.">
+<meta name="twitter:image" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Paulistânia Desvairada","url":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/","logo":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png","email":"paulistaniadesvairada@gmail.com","telephone":"+55 11 97179-9889","sameAs":["https://www.instagram.com/paulistaniadesvairada/"]}</script>
+</head><body>
 <header><div class="wrap nav">
-<a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+<a href="index.html"><img decoding="async" class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
 <nav class="navlinks">
 <a href="experiencias.html">Experiências</a>
 <a href="agenda.html">Agenda</a>
@@ -152,7 +166,7 @@ document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  }
  if(form.pagamento==="pix"){
    try{await navigator.clipboard.writeText(PIX_KEY)}catch(e){}
-   alert("Reserva registrada. Chave Pix: "+PIX_KEY+"\n\nApós o pagamento, envie o comprovante conforme as orientações que definiremos na revisão final.");
+   alert("Pedido de reserva recebido!\n\nA chave Pix foi copiada: "+PIX_KEY+"\n\nAssim que identificarmos seu pagamento, enviaremos a confirmação da sua vaga pelo WhatsApp informado no cadastro. Sua reserva estará confirmada somente após essa mensagem.");
  }else{
    const key=[dados.experiencia,dados.bilhete,dados.valor].join("|");
    const destino = CIELO[key] || CIELO_POR_VALOR[dados.valor];

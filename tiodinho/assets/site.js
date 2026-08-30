@@ -1,0 +1,5 @@
+
+(function(){
+ const t=document.querySelector('.mobile-toggle'),m=document.querySelector('.menu'); if(t&&m)t.addEventListener('click',()=>{m.classList.toggle('open');t.setAttribute('aria-expanded',m.classList.contains('open'))});
+ const form=document.getElementById('mailingForm'); if(form) form.addEventListener('submit',async e=>{e.preventDefault();const s=document.getElementById('mailingStatus'),b=form.querySelector('button');b.disabled=true;s.textContent='Enviando...';const d=Object.fromEntries(new FormData(form).entries());try{await fetch('https://script.google.com/macros/s/AKfycbx-MNgoT6LdavOZ9CiY4MnoBAYWab8KUnQAQVdGggbZOXaKkqOa4FpTVwhurwIGgp1aHQ/exec',{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({...d,tipo_formulario:'mailing',origem:'Site - Tio Dinho'})});s.textContent='Cadastro realizado. Você passa a receber nossas novidades.';form.reset()}catch(err){s.textContent='Não foi possível enviar agora. Fale com a gente pelo WhatsApp.'}finally{b.disabled=false}});
+})();

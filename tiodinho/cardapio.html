@@ -17,19 +17,20 @@
 .nav-actions{align-items:center}.reserve-stack{display:flex;flex-direction:column;align-items:center;gap:4px}.reserve-note{font-family:'Libre Franklin',Arial,sans-serif;font-size:.65rem;line-height:1;letter-spacing:.035em;color:#d8c7b5;white-space:nowrap}
 .cardapio-hero{min-height:560px;background:#0d0b0a;overflow:hidden}
 .cardapio-hero>img{
-  width:100%;
-  height:auto;
-  max-width:none;
-  position:absolute;
-  left:0;
-  top:50%;
-  transform:translateY(-50%);
-  object-fit:initial;
-  object-position:center;
+  position:absolute!important;
+  inset:auto!important;
+  left:0!important;
+  top:0!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  transform:translateY(-21.4%)!important;
+  object-fit:initial!important;
+  object-position:center!important;
   background:#0d0b0a
 }
-.cardapio-hero:after{background:linear-gradient(90deg,rgba(8,7,6,.94) 0%,rgba(8,7,6,.78) 29%,rgba(8,7,6,.30) 50%,rgba(8,7,6,.04) 76%)}
-.cardapio-hero .wrap{padding-bottom:12px}.cardapio-hero h1{max-width:760px}
+.cardapio-hero:after{background:linear-gradient(90deg,rgba(8,7,6,.91) 0%,rgba(8,7,6,.73) 28%,rgba(8,7,6,.27) 49%,rgba(8,7,6,.03) 76%)}
+.cardapio-hero .wrap{padding-bottom:12px}.cardapio-hero h1{max-width:760px;line-height:.88}
 .intro-split{display:grid;grid-template-columns:1.08fr .92fr;min-height:520px;background:var(--paper);color:#17120f}.intro-copy{padding:clamp(46px,6vw,90px);display:flex;flex-direction:column;justify-content:center}.intro-copy p{max-width:720px;line-height:1.78}.intro-copy .statement{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--wine);font-size:clamp(1.35rem,2vw,2rem);margin-top:22px}.intro-photo{min-height:520px;overflow:hidden}.intro-photo img{height:100%;object-fit:cover;object-position:center 52%}
 .menu-current{padding:78px 0;background:#11100f}.menu-current .lead-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:end;margin-bottom:30px}.menu-current h2{font-size:clamp(3.2rem,5.2vw,5.8rem);line-height:.92;margin:.15em 0}.menu-current p{max-width:680px;color:#d9c9bb;line-height:1.7}.menu-current .gallery{margin-top:28px}
 .lunch-section{background:var(--paper);color:#17120f;padding:84px 0}.lunch-intro{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:end;margin-bottom:34px}.lunch-intro h2{font-size:clamp(3rem,5vw,5.5rem);line-height:.93;margin:.15em 0}.lunch-intro p{line-height:1.72;margin:0}.lunch-subtitle{margin:42px 0 18px;font-family:'Antonio','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.09em;font-size:1.55rem;color:var(--wine)}
@@ -37,13 +38,17 @@
 .executive-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.executive-card img{height:100%;min-height:360px;object-fit:cover}.executive-copy{background:#efe3d4;padding:clamp(30px,4vw,52px);display:flex;flex-direction:column;justify-content:center}.executive-copy h3{font-size:clamp(2.4rem,4vw,4rem);line-height:.95;margin:.15em 0}.executive-copy p{line-height:1.72}.executive-copy .small-note{font-size:.82rem;color:#69584d}
 .digital-menu{background:linear-gradient(120deg,#4d1719,#270b0d);padding:64px 0}.digital-menu .wrap{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.digital-menu h2{font-size:clamp(2.7rem,4.5vw,4.8rem);line-height:.94;margin:.1em 0}.digital-menu p{max-width:690px;color:#dfd0c3}
 @media(max-width:1000px){.site-header .nav{height:92px;grid-template-columns:190px 1fr auto}.site-header .brand img{height:68px}.reserve-note{display:none}.intro-split,.menu-current .lead-grid,.lunch-intro,.executive-row{grid-template-columns:1fr}.pf-grid-plus{grid-template-columns:repeat(2,1fr)}.digital-menu .wrap{grid-template-columns:1fr}.intro-photo{min-height:400px}}
-@media(max-width:620px){.site-header .nav{height:78px}.site-header .brand img{height:56px}.cardapio-hero{min-height:520px}.cardapio-hero>img{width:auto;height:100%;min-width:100%;left:50%;top:50%;transform:translate(-50%,-50%);object-fit:cover;opacity:.72}.intro-copy{padding:42px 22px}.intro-photo{min-height:320px}.pf-grid-plus{grid-template-columns:1fr}.executive-card img{min-height:300px}.lunch-section,.menu-current{padding:58px 0}}
+@media(max-width:620px){.site-header .nav{height:78px}.site-header .brand img{height:56px}.cardapio-hero{min-height:520px}.cardapio-hero>img{
+  inset:0!important;width:100%!important;height:100%!important;min-width:100%!important;
+  left:0!important;top:0!important;transform:none!important;object-fit:cover!important;
+  object-position:46% 38%!important;opacity:.72
+}.intro-copy{padding:42px 22px}.intro-photo{min-height:320px}.pf-grid-plus{grid-template-columns:1fr}.executive-card img{min-height:300px}.lunch-section,.menu-current{padding:58px 0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Tio Dinho — Cozinha Caipira Contemporânea","url":"https://cozinhaculturaearte.com.br/tiodinho/","image":"https://cozinhaculturaearte.com.br/tiodinho/assets/pato-fogao.webp","telephone":"+55 11 97179-9889","address":{"@type":"PostalAddress","streetAddress":"Rua João Leone, 51 — Sousas","addressLocality":"Campinas","addressRegion":"SP","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"15:00"}],"servesCuisine":["Cozinha caipira contemporânea","Cozinha brasileira"],"sameAs":["https://www.instagram.com/tiodinho_cozinha/"]}</script>
 </head><body>
 <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Tio Dinho — Cozinha Caipira Contemporânea"></a><nav class="menu" aria-label="Menu principal"><a href="cardapio.html" aria-current="page">Cardápio</a><a href="menu-degustacao.html">Menu + Literatura</a><a href="caipirismo.html">Caipirismo</a><a href="nossa-historia.html">Nossa história</a><a href="eventos.html">Eventos</a><a href="visite.html">Visite</a></nav><div class="nav-actions"><div class="reserve-stack"><a class="btn" href="https://wa.me/5511971799889?text=Olá%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20Tio%20Dinho." target="_blank" rel="noopener">Reservar</a><span class="reserve-note">Peça antes. Aproveite mais!</span></div><button class="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button></div></div></header>
 <main>
-<section class="page-hero with-image cardapio-hero"><img src="assets/pato-fogao.webp" alt="Pato no fogão caipira"><div class="wrap"><div class="eyebrow">Cardápio</div><h1>A mesa do Tio Dinho</h1><p>Ingredientes brasileiros, repertório caipira, técnicas contemporâneas e uma cozinha que conversa com o mundo em pé de igualdade.</p></div></section>
+<section class="page-hero with-image cardapio-hero"><img src="assets/pato-fogao.webp" alt="Pato no fogão caipira"><div class="wrap"><div class="eyebrow">Cardápio</div><h1>A mesa do<br>Tio Dinho</h1><p>Ingredientes brasileiros, repertório caipira, técnicas contemporâneas e uma cozinha que conversa com o mundo em pé de igualdade.</p></div></section>
 <section class="intro-split"><div class="intro-copy"><div class="eyebrow dark-eyebrow">Cozinhamos a partir daqui</div><p>O cardápio do Tio Dinho explora a <strong>versatilidade dos ingredientes brasileiros</strong> e sua capacidade de abraçar sabores e ideias que vieram de muitos lugares. Nossa cozinha parte daqui e conversa com o mundo em pé de igualdade.</p><p>Gostamos de cozinhas de diferentes culturas, assim como gostamos da nossa. Por isso, um estrogonofe, um yakissoba ou um gallo pinto podem aparecer por aqui. Quando aparecem, passam pela nossa despensa, pelo nosso repertório e pelo nosso jeito de cozinhar.</p><p>Essa liberdade orienta o <strong>cardápio da estação</strong>. A colheita, a disponibilidade dos produtores e o tempo de cada preparo ajudam a decidir o que vai para a mesa.</p><p class="statement">Ter raiz não é ficar parado. É saber de onde se parte.</p></div><div class="intro-photo"><img src="assets/acervo-master/tio-dinho/933fe737-23b1-4545-9ee3-c8f81172d825-c9dbd0a9.webp" alt="Curry servido no Tio Dinho" loading="lazy"></div></section>
 <section class="menu-current"><div class="wrap"><div class="lead-grid"><div><div class="eyebrow">Cardápio da estação</div><h2>Familiaridade e descoberta na mesma mesa</h2></div><p>Pratos que permanecem, acompanhamentos que mudam, ingredientes que chegam em momentos diferentes. A cozinha se organiza a partir da estação, da colheita e daquilo que faz sentido servir agora.</p></div><div class="gallery">
 <figure><img src="assets/virado.webp" alt="Virado à Paulistânia"><figcaption>Virado à Paulistânia</figcaption></figure><figure><img src="assets/hero-marvada.webp" alt="Marvada Carne"><figcaption>Marvada Carne</figcaption></figure><figure><img src="assets/arroz-pato.webp" alt="Arroz de pato"><figcaption>Arroz de pato</figcaption></figure><figure><img src="assets/eryngui.webp" alt="Eryngui"><figcaption>Eryngui</figcaption></figure><figure><img src="assets/manjar-cumaru.webp" alt="Manjar de cumaru"><figcaption>Manjar de cumaru</figcaption></figure><figure><img src="assets/salada.webp" alt="Folhas, legumes e colheita do dia"><figcaption>Folhas, legumes e colheita do dia</figcaption></figure>

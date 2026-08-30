@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/paulistaniadesvairada/",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/paulistaniadesvairada/assets/(.*)",

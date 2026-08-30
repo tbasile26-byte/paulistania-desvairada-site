@@ -4,15 +4,41 @@
 <link rel="canonical" href="https://cozinhaculturaearte.com.br/tiodinho/menu-degustacao.html">
 <meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Tio Dinho">
 <meta property="og:title" content="Menu degustação harmonizado com literatura | Tio Dinho"><meta property="og:description" content="Literatura e gastronomia colocadas em relação, prato a prato, leitura a leitura.">
-<meta property="og:url" content="https://cozinhaculturaearte.com.br/tiodinho/menu-degustacao.html"><meta property="og:image" content="https://cozinhaculturaearte.com.br/tiodinho/assets/festa-mesa.webp"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://cozinhaculturaearte.com.br/tiodinho/menu-degustacao.html"><meta property="og:image" content="https://cozinhaculturaearte.com.br/tiodinho/assets/hero-menu-literatura-v2.webp"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#351012"><link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600&family=Libre+Franklin:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.menu-lit-hero{min-height:500px}
-.menu-lit-hero>img{object-position:center bottom!important}
-.menu-lit-hero .wrap{padding-bottom:42px}
+.menu-lit-hero{
+  min-height:500px;
+  position:relative;
+  overflow:hidden;
+  background:#100c0a;
+}
+.menu-lit-hero>img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  min-height:0!important;
+  object-fit:cover!important;
+  object-position:center 52%!important;
+  z-index:0;
+}
+.menu-lit-hero:before{display:none!important}
+.menu-lit-hero:after{
+  z-index:1!important;
+  background:
+    linear-gradient(90deg,rgba(8,6,5,.92) 0%,rgba(8,6,5,.76) 34%,rgba(8,6,5,.26) 60%,rgba(8,6,5,.06) 100%)!important,
+    linear-gradient(0deg,rgba(8,6,5,.38),transparent 56%)!important;
+}
+.menu-lit-hero .wrap{
+  position:relative;
+  z-index:2!important;
+  padding-bottom:42px;
+}
 .menu-lit-hero h1{font-size:clamp(3.4rem,6.4vw,6.4rem);line-height:.91;max-width:920px}
 .menu-lit-hero h1 span{display:block}
 .menu-lit-intro{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
@@ -30,12 +56,14 @@
 .research-images figure:first-child img{object-position:center 30%}
 .research-images figure:last-child img{object-position:center 50%}
 @media(max-width:800px){
- .menu-lit-hero{min-height:450px}.menu-lit-hero>img{object-position:56% center!important}.menu-lit-hero h1{font-size:clamp(3rem,14vw,4.8rem)}
+ .menu-lit-hero{min-height:520px}
+ .menu-lit-hero>img{object-position:center 52%!important}
+ .menu-lit-hero h1{font-size:clamp(3rem,14vw,4.8rem)}
  .menu-lit-intro,.research-grid{grid-template-columns:1fr}
  .menu-lit-intro{gap:32px}.menu-lit-intro .photo{min-height:420px}
  .research-images{gap:10px}.menu-history-cards{grid-template-columns:1fr 1fr}.menu-lit-intro .photo img,.compact-literature-band .photo img{width:88%}
 }
-@media(max-width:560px){.menu-history-cards{grid-template-columns:1fr}.menu-lit-hero{min-height:420px}.menu-lit-intro .photo img,.compact-literature-band .photo img{width:100%}}
+@media(max-width:560px){.menu-history-cards{grid-template-columns:1fr}.menu-lit-hero{min-height:500px}.menu-lit-intro .photo img,.compact-literature-band .photo img{width:100%}}
 </style>
 </head><body class="menu-lit">
 <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Tio Dinho — Cozinha Caipira Contemporânea"></a>
@@ -43,7 +71,7 @@
 <div class="nav-actions"><a class="btn" href="https://wa.me/5511971799889?text=Olá%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20Tio%20Dinho." target="_blank" rel="noopener">Reservar</a><button class="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button></div></div></header>
 
 <main>
-<section class="page-hero with-image menu-lit-hero"><img src="assets/festa-mesa.webp" alt="Mesa durante um menu degustação harmonizado com literatura"><div class="wrap"><div class="eyebrow">Menu + Literatura</div><h1><span>Menu degustação</span><span>harmonizado com literatura</span></h1><p>Literatura e gastronomia colocadas em relação, prato a prato, leitura a leitura.</p></div></section>
+<section class="page-hero with-image menu-lit-hero"><img src="assets/hero-menu-literatura-v2.webp" alt="Mesa durante um menu degustação harmonizado com literatura"><div class="wrap"><div class="eyebrow">Menu + Literatura</div><h1><span>Menu degustação</span><span>harmonizado com literatura</span></h1><p>Literatura e gastronomia colocadas em relação, prato a prato, leitura a leitura.</p></div></section>
 
 <section class="section light"><div class="wrap menu-lit-intro"><div class="prose"><p>No Tio Dinho, criamos <strong>menus degustação harmonizados com literatura</strong>.</p><p>Assim como acontece na harmonização entre comida e bebida, procuramos relações capazes de transformar a experiência de ambos. Um prato pode nascer de uma imagem, de uma atmosfera, de uma personagem, de uma passagem ou de uma ideia presente no texto. Ao mesmo tempo, aquilo que se come pode devolver o leitor à obra com outras sensações e outros significados.</p><p>Chamamos isso de <strong>harmonização entre literatura e gastronomia</strong>.</p><p>A cada edição, selecionamos textos e criamos um percurso gastronômico para colocá-los em relação. Cada pessoa recebe um livreto com as leituras e o menu daquela noite e acompanha, prato a prato, os encontros propostos entre literatura e comida.</p><p>O resultado acontece em cada pessoa: na leitura, no sabor, na memória e nas relações que surgem entre eles.</p></div><div class="photo tall"><img src="assets/afrodite-prato-livreto.webp" alt="Prato e livreto do menu Lá no Reino de Afrodite" loading="lazy"></div></div></section>
 

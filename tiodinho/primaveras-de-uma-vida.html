@@ -38,9 +38,22 @@
 @media(max-width:1000px){.pv-intro,.pv-menu-band,.pv-book,.pv-fit,.pv-buy-grid{grid-template-columns:1fr}.pv-points,.pv-night{grid-template-columns:1fr 1fr}.pv-life-grid{grid-template-columns:1fr}.pv-decade:nth-child(odd){border-right:0}.pv-gallery{grid-template-columns:repeat(2,1fr)}.pv-authors{grid-template-columns:repeat(2,1fr)}.pv-payment{position:static}.pv-hero>img{object-position:63% center}}
 @media(max-width:620px){.pv-hero{min-height:620px}.pv-hero .wrap{padding-bottom:48px}.pv-hero h1{font-size:3.8rem}.pv-points,.pv-night,.pv-gallery,.pv-authors,.pv-formgrid{grid-template-columns:1fr}.pv-decade{grid-template-columns:62px 1fr}.pv-decade img{grid-column:2;width:100%;height:170px}.pv-cover{padding:8px}.pv-gallery img{height:390px}.pv-author,.pv-author img{height:390px}.pv-sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#100b09;border-top:1px solid #b9914360;padding:9px 12px;align-items:center;justify-content:space-between;gap:10px}.pv-sticky span{font-size:.75rem}.pv-sticky b{display:block;color:var(--pv-gold)}.pv-sticky .btn{min-height:40px;padding:8px 13px;font-size:.9rem}.site-footer{padding-bottom:92px}}
 </style>
-</head>
+<style>
+/* Cabeçalho unificado Tio Dinho — V3 */
+.site-header .nav{height:106px;grid-template-columns:220px 1fr auto;gap:20px}
+.site-header .brand img{height:82px}
+.site-header .menu{font-size:.88rem;gap:18px}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.reserve-stack{display:flex;flex-direction:column;align-items:center;gap:4px}
+.reserve-stack .btn{padding:10px 13px;font-size:.78rem;white-space:nowrap}
+.reserve-note{font-family:'Libre Franklin',Arial,sans-serif;font-size:.58rem;line-height:1;letter-spacing:.025em;color:#d8c7b5;white-space:nowrap}
+.reserve-menu .btn{background:#f0dfc3;color:#351012}
+.reserve-menu .reserve-note{color:#d7b56c}
+@media(max-width:1180px){.site-header .nav{grid-template-columns:180px 1fr auto}.site-header .brand img{height:70px}.site-header .menu{font-size:.78rem;gap:12px}.reserve-stack .btn{font-size:.7rem;padding:9px}.reserve-note{display:none}}
+@media(max-width:900px){.site-header .nav{height:82px;grid-template-columns:150px 1fr auto}.site-header .brand img{height:60px}.nav-actions .reserve-stack{display:none}}
+</style></head>
 <body>
-<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Tio Dinho — Cozinha Caipira Contemporânea"></a><nav class="menu" aria-label="Menu principal"><a href="cardapio.html">Cardápio</a><a href="menu-degustacao.html" aria-current="page">Menu + Literatura</a><a href="caipirismo.html">Caipirismo</a><a href="nossa-historia.html">Nossa história</a><a href="eventos.html">Eventos</a><a href="visite.html">Visite</a></nav><div class="nav-actions"><a class="btn" href="#reservar">Reservar</a><button class="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button></div></div></header>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Tio Dinho — Cozinha Caipira Contemporânea"></a><nav class="menu" aria-label="Menu principal"><a href="cardapio.html">Cardápio</a><a href="menu-degustacao.html">Menu + Literatura</a><a href="caipirismo.html">Caipirismo</a><a href="nossa-historia.html">Nossa história</a><a href="eventos.html">Eventos</a><a href="visite.html">Visite</a></nav><div class="nav-actions"><div class="reserve-stack reserve-lunch"><a class="btn" href="reservar-almoco.html">Reservar Almoço</a><span class="reserve-note">Peça antes. Aproveite mais!</span></div><div class="reserve-stack reserve-menu"><a class="btn" href="primaveras-de-uma-vida.html#reservar">Reservar Menu Degustação</a><span class="reserve-note">Harmonizado com literatura</span></div><button class="mobile-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button></div></div></header>
 <main>
 <section class="pv-hero"><img src="assets/prim-carne.webp" alt="Carne na lenha do menu Primaveras de uma Vida"><div class="wrap"><div class="pv-hero-copy"><div class="eyebrow">Menu degustação harmonizado com literatura</div><h1>Primaveras<br>de uma Vida</h1><p class="lead">Uma vida atravessada por dez textos e dez pratos, dos primeiros anos à velhice. Literatura e comida se encontram à mesa sem determinar uma leitura: a experiência acontece em cada pessoa.</p><div class="pv-price">Menu completo <b>R$ 140</b> por pessoa · reserva com 50%</div><div class="actions"><a class="btn" href="#reservar">Reservar meu lugar</a><a class="btn alt" href="#como-funciona">Como é a noite</a></div></div></div></section>
 

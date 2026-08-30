@@ -10,22 +10,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500;600&family=Libre+Franklin:wght@300;400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.menu-lit-hero{min-height:520px}
-.menu-lit-hero>img{object-position:center 46%!important}
+.menu-lit-hero{min-height:500px}
+.menu-lit-hero>img{object-position:center bottom!important}
 .menu-lit-hero .wrap{padding-bottom:42px}
 .menu-lit-hero h1{font-size:clamp(3.4rem,6.4vw,6.4rem);line-height:.91;max-width:920px}
 .menu-lit-hero h1 span{display:block}
-.menu-lit-intro{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
-.menu-lit-intro .photo{min-height:520px}
-.menu-lit-intro .photo img{object-position:center 48%}
+.menu-lit-intro{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+.menu-lit main>.section.light:first-of-type{padding-top:54px;padding-bottom:54px}.compact-literature-band{padding-top:54px!important;padding-bottom:54px!important}
+.menu-lit-intro .photo{min-height:0;display:flex;align-items:center;justify-content:center}
+.menu-lit-intro .photo img{width:78%;height:auto;object-fit:contain;object-position:center;display:block}
 .menu-lit h2{font-size:clamp(2.55rem,4.2vw,4.55rem);line-height:.96;max-width:760px}
+.compact-literature-band .photo{display:flex;align-items:center;justify-content:center;min-height:0}.compact-literature-band .photo img{width:76%;height:auto;object-fit:contain;display:block}.compact-literature-band .grid2{align-items:center}
 .menu-lit .chapter-title{max-width:660px}
-.menu-lit .cards h3{line-height:1.02}
-.afrodite-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;margin-top:42px;background:#211817;border:1px solid rgba(255,255,255,.1)}
-.afrodite-feature .afrodite-photo{min-height:520px;overflow:hidden}
-.afrodite-feature .afrodite-photo img{width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block}
-.afrodite-feature .afrodite-copy{padding:clamp(34px,5vw,66px);display:flex;flex-direction:column;justify-content:center}
-.afrodite-feature .afrodite-copy h3{font-family:"Antonio";font-weight:400;text-transform:uppercase;font-size:clamp(2.4rem,4vw,4.25rem);line-height:.95;margin:.1em 0 .45em}
+.menu-lit .cards h3{line-height:1.02}.menu-history-cards{grid-template-columns:repeat(4,minmax(0,1fr))}.menu-history-cards .card img{aspect-ratio:4/3;object-fit:cover}.menu-history-cards .card:nth-child(4) img{object-position:center 46%}
 .research-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
 .research-images{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .research-images figure{margin:0;overflow:hidden;aspect-ratio:4/5;background:#1d1713}
@@ -34,11 +31,11 @@
 .research-images figure:last-child img{object-position:center 50%}
 @media(max-width:800px){
  .menu-lit-hero{min-height:450px}.menu-lit-hero>img{object-position:56% center!important}.menu-lit-hero h1{font-size:clamp(3rem,14vw,4.8rem)}
- .menu-lit-intro,.afrodite-feature,.research-grid{grid-template-columns:1fr}
+ .menu-lit-intro,.research-grid{grid-template-columns:1fr}
  .menu-lit-intro{gap:32px}.menu-lit-intro .photo{min-height:420px}
- .afrodite-feature .afrodite-photo{min-height:430px}
- .research-images{gap:10px}
+ .research-images{gap:10px}.menu-history-cards{grid-template-columns:1fr 1fr}.menu-lit-intro .photo img,.compact-literature-band .photo img{width:88%}
 }
+@media(max-width:560px){.menu-history-cards{grid-template-columns:1fr}.menu-lit-hero{min-height:420px}.menu-lit-intro .photo img,.compact-literature-band .photo img{width:100%}}
 </style>
 </head><body class="menu-lit">
 <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.png" alt="Tio Dinho — Cozinha Caipira Contemporânea"></a>
@@ -50,17 +47,16 @@
 
 <section class="section light"><div class="wrap menu-lit-intro"><div class="prose"><p>No Tio Dinho, criamos <strong>menus degustação harmonizados com literatura</strong>.</p><p>Assim como acontece na harmonização entre comida e bebida, procuramos relações capazes de transformar a experiência de ambos. Um prato pode nascer de uma imagem, de uma atmosfera, de uma personagem, de uma passagem ou de uma ideia presente no texto. Ao mesmo tempo, aquilo que se come pode devolver o leitor à obra com outras sensações e outros significados.</p><p>Chamamos isso de <strong>harmonização entre literatura e gastronomia</strong>.</p><p>A cada edição, selecionamos textos e criamos um percurso gastronômico para colocá-los em relação. Cada pessoa recebe um livreto com as leituras e o menu daquela noite e acompanha, prato a prato, os encontros propostos entre literatura e comida.</p><p>O resultado acontece em cada pessoa: na leitura, no sabor, na memória e nas relações que surgem entre eles.</p></div><div class="photo tall"><img src="assets/afrodite-prato-livreto.webp" alt="Prato e livreto do menu Lá no Reino de Afrodite" loading="lazy"></div></div></section>
 
-<section class="section paper"><div class="wrap grid2"><div><div class="eyebrow">Como harmonizamos</div><h2 class="chapter-title">Novos sentidos</h2><div class="prose"><p>Literatura e gastronomia são linguagens diferentes. Cada uma tem seus próprios recursos para produzir sentidos.</p><p>Ao harmonizá-las, buscamos pontos de contato. Às vezes eles são bastante concretos: um alimento citado em uma obra, um lugar, uma época. Em outros casos, partimos de uma sensação, de uma estrutura, de uma imagem ou de uma ideia.</p><p>A comida acrescenta uma dimensão particular à leitura: o corpo. Visão, olfato, tato, paladar, audição e memória passam a participar da experiência.</p></div></div><div class="photo med"><img src="assets/festa-livreto.webp" alt="Livreto do menu Festa do Interior" loading="lazy"></div></div></section>
+<section class="section paper compact-literature-band"><div class="wrap grid2"><div><div class="eyebrow">Como harmonizamos</div><h2 class="chapter-title">Novos sentidos</h2><div class="prose"><p>Literatura e gastronomia são linguagens diferentes. Cada uma tem seus próprios recursos para produzir sentidos.</p><p>Ao harmonizá-las, buscamos pontos de contato. Às vezes eles são bastante concretos: um alimento citado em uma obra, um lugar, uma época. Em outros casos, partimos de uma sensação, de uma estrutura, de uma imagem ou de uma ideia.</p><p>A comida acrescenta uma dimensão particular à leitura: o corpo. Visão, olfato, tato, paladar, audição e memória passam a participar da experiência.</p></div></div><div class="photo med"><img src="assets/festa-livreto.webp" alt="Livreto do menu Festa do Interior" loading="lazy"></div></div></section>
 
 <section class="section wine"><div class="wrap grid2"><div class="photo tall"><img src="assets/prim-carne.webp" alt="Prato do menu Primaveras de uma Vida" loading="lazy"></div><div><div class="eyebrow">Agora à mesa</div><h2>Primaveras de uma Vida</h2><p>Uma vida atravessada por dez décadas, dez textos e dez pratos. Minou Drouet, Rimbaud, Álvares de Azevedo, Júlio Kamêr R. Apinajé, Dante, Fernando Pessoa, Conceição Evaristo, Mário Quintana, Manoel de Barros e Cora Coralina acompanham o percurso.</p><div class="actions"><a class="btn" href="primaveras-de-uma-vida.html">Conheça o menu</a><a class="btn alt" href="https://wa.me/5511971799889?text=Olá%2C%20quero%20saber%20as%20próximas%20datas%20do%20menu%20Primaveras%20de%20uma%20Vida." target="_blank" rel="noopener">Ver datas e reservar</a></div></div></div></section>
 
-<section class="section dark"><div class="wrap"><div class="eyebrow">Menus que já passaram por aqui</div><h2 class="chapter-title">Cada edição,<br>uma pergunta diferente</h2><div class="cards">
+<section class="section dark"><div class="wrap"><div class="eyebrow">Menus que já passaram por aqui</div><h2 class="chapter-title">Cada edição,<br>uma pergunta diferente</h2><div class="cards menu-history-cards">
 <article class="card"><img src="assets/dom-casmurro.webp" alt="Olhos de Ressaca, prato do menu Dom Casmurro"><div class="card-body"><h3>Dom Casmurro</h3><p>Um menu degustação harmonizado com <em>Dom Casmurro</em>, de Machado de Assis, construído a partir das possibilidades de encontro entre o romance e a experiência à mesa.</p></div></article>
 <article class="card"><img src="assets/baile-mesa.webp" alt="Mesa do menu Baile de Máscaras"><div class="card-body"><h3>Baile de Máscaras</h3><p>Sete tempos, um para cada dia da festa, viajando entre a expectativa, o desvairio e o retorno.</p></div></article>
 <article class="card"><img src="assets/festa-milho.webp" alt="Milho na brasa do menu Festa do Interior"><div class="card-body"><h3>Festa do Interior</h3><p>Nove pratos e nove textos literários para olhar a comida caipira a partir do presente.</p><a class="linkline" href="festa-do-interior.html">Ver edição</a></div></article>
-</div>
-<div class="afrodite-feature"><div class="afrodite-photo"><img src="assets/afrodite-mesa-livreto.webp" alt="Pratos e livreto do menu Lá no Reino de Afrodite" loading="lazy"></div><div class="afrodite-copy"><div class="eyebrow">Uma edição especial</div><h3>Lá no Reino<br>de Afrodite</h3><p>Uma história de amor contada em nove tempos — do primeiro olhar ao que permanece. Criado especialmente para o Dia dos Namorados.</p><p><em>Um único encontro. Um encontro único.</em></p></div></div>
-</div></section>
+<article class="card"><img src="assets/afrodite-mesa-livreto.webp" alt="Pratos e livreto do menu Lá no Reino de Afrodite"><div class="card-body"><h3>Lá no Reino de Afrodite</h3><p>Uma história de amor contada em nove tempos — do primeiro olhar ao que permanece. Criado especialmente para o Dia dos Namorados.</p><p><em>Um único encontro. Um encontro único.</em></p></div></article>
+</div></div></section>
 
 <section class="section light"><div class="wrap research-grid"><div><div class="eyebrow">Uma pesquisa que continua</div><h2>Harmonização entre literatura<br>e gastronomia</h2><div class="prose"><p>Cada menu nos permite experimentar diferentes maneiras de harmonizar literatura e gastronomia.</p><p>Ao longo das edições, esses processos de criação também se tornaram objeto de pesquisa: como um prato pode dialogar com um texto? O que muda na leitura quando o corpo participa dela? O que acontece com um sabor quando ele é colocado em relação com uma narrativa?</p><p>A pesquisa parte da própria prática desenvolvida no Tio Dinho e reúne as duas áreas de atuação do chef Thiago Basile: a gastronomia e os estudos literários.</p></div></div><div class="research-images"><figure><img src="assets/dante.webp" alt="Dante Alighieri"></figure><figure><img src="assets/prim-tartar.webp" alt="Prato do menu Primaveras de uma Vida"></figure></div></div></section>
 </main>

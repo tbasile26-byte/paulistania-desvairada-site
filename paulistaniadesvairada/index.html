@@ -125,6 +125,50 @@ footer{border-top:1px solid var(--line);padding:24px 0 38px;font-size:11px}.foot
 <meta name="twitter:description" content="Experiências culturais-gastronômicas em Campinas: comida, literatura, cinema, teatro e conversa à mesa.">
 <meta name="twitter:image" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/hero-maos-massa.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Paulistânia Desvairada","url":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/","logo":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png","email":"paulistaniadesvairada@gmail.com","telephone":"+55 11 97179-9889","sameAs":["https://www.instagram.com/paulistaniadesvairada/"]}</script>
+
+<style>
+/* À Mesa — chamada editorial na home */
+.home-book{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:34px 0 38px;
+}
+.home-book-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,.72fr) 1.28fr;
+  gap:clamp(28px,5vw,68px);
+  align-items:center;
+}
+.home-book-image{
+  height:330px;
+  overflow:hidden;
+  background:#111;
+}
+.home-book-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.home-book-copy h2{
+  font-family:Georgia,serif;
+  font-size:clamp(30px,3.2vw,48px);
+  line-height:1.02;
+  margin:5px 0 14px;
+  font-weight:500;
+}
+.home-book-copy p{
+  font-family:'Courier New',monospace;
+  font-size:14px;
+  line-height:1.65;
+  max-width:760px;
+  margin:0 0 20px;
+}
+.home-book-actions{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+@media(max-width:760px){
+  .home-book-grid{grid-template-columns:1fr}
+  .home-book-image{height:300px}
+}
+</style>
 </head>
 <body>
 <header>
@@ -205,9 +249,10 @@ footer{border-top:1px solid var(--line);padding:24px 0 38px;font-size:11px}.foot
       <input name="nome" autocomplete="name" placeholder="Nome" required>
       <input name="email" type="email" autocomplete="email" placeholder="E-mail" required>
       <input name="whatsapp" type="tel" autocomplete="tel" placeholder="WhatsApp" required>
-      <button id="mailingSubmit" type="submit">Cadastrar e entrar na comunidade</button>
+      <button id="mailingSubmit" type="submit">Cadastrar</button>
     </form>
     <p id="mailingStatus" role="status" aria-live="polite" style="display:none;font-family:'Courier New',monospace;font-size:12px;line-height:1.5;margin:14px 0 0"></p>
+    <a id="communityBtn" href="https://chat.whatsapp.com/KIaZDdHoSqqCHn8lHJwYQZ" target="_blank" rel="noopener" style="display:none;margin-top:14px;padding:14px;background:#1d5f49;color:#fff;font-weight:900;text-transform:uppercase;text-align:center;font-family:Arial,sans-serif;font-size:12px">Entrar na comunidade da Paulistânia Desvairada e do Tio Dinho</a>
     <small style="display:block;margin-top:12px;font-family:'Courier New',monospace;line-height:1.4">Ao se cadastrar, você autoriza o envio de informações sobre a programação da Paulistânia Desvairada e do Tio Dinho pelos contatos informados.</small>
   </div>
 </section>
@@ -220,6 +265,22 @@ footer{border-top:1px solid var(--line);padding:24px 0 38px;font-size:11px}.foot
 <a href="na-midia.html"><img loading="lazy" decoding="async" src="assets/midia-band-mulher.png" alt="Participação no Band Mulher" style="width:100%;aspect-ratio:4/3;object-fit:cover"><p class="eyebrow" style="margin:10px 0 4px">Band Mulher</p><strong>Literatura e gastronomia na televisão</strong></a>
 </div>
 <style>@media(max-width:760px){.home-media-grid{grid-template-columns:1fr!important}}</style>
+</section>
+
+<section class="home-book">
+  <div class="wrap home-book-grid">
+    <a class="home-book-image" href="../a-mesa.html">
+      <img loading="lazy" decoding="async" src="../a-mesa-assets/11-ativacao-sensorial.webp" alt="Ativação sensorial ligada ao livro À Mesa">
+    </a>
+    <div class="home-book-copy">
+      <div class="eyebrow">Livro · À Mesa</div>
+      <h2>Teatro de Comer: da experiência à reflexão</h2>
+      <p><em>À Mesa</em>, livro de Thiago Villela Basile publicado pela Caravana Grupo Editorial, reúne texto teatral, ensaio e receitas. A obra nasce também das experiências desenvolvidas na Paulistânia Desvairada e no Tio Dinho e apresenta a pesquisa em torno do Teatro de Comer e da Dramaturgia do Sabor.</p>
+      <div class="home-book-actions">
+        <a class="text-link" href="../a-mesa.html">Conheça o livro <span>→</span></a>
+      </div>
+    </div>
+  </div>
 </section>
 <section class="wrap" id="faq" style="padding:10px 0 30px"><a href="perguntas-frequentes.html" style="display:block;border-top:1px solid var(--line);padding-top:25px;font-family:'Courier New',monospace"><strong>Perguntas Frequentes</strong> <span aria-hidden="true">→</span></a></section>
 <section class="wrap" id="politica" style="padding:10px 0 40px"><a href="politica-de-compras.html" style="display:block;border-top:1px solid var(--line);padding-top:25px;font-family:'Courier New',monospace"><strong>Política de Compras</strong> <span aria-hidden="true">→</span></a></section>
@@ -312,7 +373,7 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
   if(!form) return;
   const btn = document.getElementById('mailingSubmit');
   const status = document.getElementById('mailingStatus');
-  const COMMUNITY_URL = 'https://chat.whatsapp.com/KIaZDdHoSqqCHn8lHJwYQZ';
+  const communityBtn = document.getElementById('communityBtn');
 
   form.addEventListener('submit', async function(e){
     e.preventDefault();
@@ -329,6 +390,7 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
     btn.textContent = 'Cadastrando...';
     status.style.display = 'block';
     status.textContent = 'Registrando seu contato...';
+    communityBtn.style.display = 'none';
 
     try {
       await fetch(APPS_SCRIPT_SITE, {
@@ -338,16 +400,15 @@ modal.addEventListener('click',e=>{if(e.target===modal)closePay()});
         headers: {'Content-Type':'text/plain;charset=utf-8'},
         body: JSON.stringify(payload)
       });
-      status.textContent = 'Cadastro realizado! Agora você será direcionado para a comunidade da Paulistânia Desvairada e do Tio Dinho no WhatsApp.';
+      status.textContent = 'Cadastro enviado. Agora você já pode entrar na comunidade.';
+      communityBtn.style.display = 'block';
       form.reset();
-      btn.textContent = 'Cadastro realizado';
-      setTimeout(() => { window.location.href = COMMUNITY_URL; }, 1400);
     } catch(err) {
       console.error(err);
       status.textContent = 'Não foi possível enviar seu cadastro. Tente novamente ou fale conosco pelo WhatsApp.';
     } finally {
       btn.disabled = false;
-      if (!status.textContent.startsWith('Cadastro realizado!')) btn.textContent = 'Cadastrar e entrar na comunidade';
+      btn.textContent = 'Cadastrar';
     }
   });
 })();

@@ -16,8 +16,19 @@
 .site-header .nav{height:106px;grid-template-columns:245px 1fr auto}.site-header .brand img{height:82px}.site-header .menu{font-size:.92rem;gap:24px}
 .nav-actions{align-items:center}.reserve-stack{display:flex;flex-direction:column;align-items:center;gap:4px}.reserve-note{font-family:'Libre Franklin',Arial,sans-serif;font-size:.65rem;line-height:1;letter-spacing:.035em;color:#d8c7b5;white-space:nowrap}
 .cardapio-hero{min-height:560px;background:#0d0b0a;overflow:hidden}
-.cardapio-hero>img{object-fit:contain;object-position:82% center;background:#0d0b0a}
-.cardapio-hero:after{background:linear-gradient(90deg,rgba(8,7,6,.96) 0%,rgba(8,7,6,.84) 31%,rgba(8,7,6,.35) 53%,rgba(8,7,6,.05) 78%)}
+.cardapio-hero>img{
+  width:100%;
+  height:auto;
+  max-width:none;
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  object-fit:initial;
+  object-position:center;
+  background:#0d0b0a
+}
+.cardapio-hero:after{background:linear-gradient(90deg,rgba(8,7,6,.94) 0%,rgba(8,7,6,.78) 29%,rgba(8,7,6,.30) 50%,rgba(8,7,6,.04) 76%)}
 .cardapio-hero .wrap{padding-bottom:12px}.cardapio-hero h1{max-width:760px}
 .intro-split{display:grid;grid-template-columns:1.08fr .92fr;min-height:520px;background:var(--paper);color:#17120f}.intro-copy{padding:clamp(46px,6vw,90px);display:flex;flex-direction:column;justify-content:center}.intro-copy p{max-width:720px;line-height:1.78}.intro-copy .statement{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:var(--wine);font-size:clamp(1.35rem,2vw,2rem);margin-top:22px}.intro-photo{min-height:520px;overflow:hidden}.intro-photo img{height:100%;object-fit:cover;object-position:center 52%}
 .menu-current{padding:78px 0;background:#11100f}.menu-current .lead-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:end;margin-bottom:30px}.menu-current h2{font-size:clamp(3.2rem,5.2vw,5.8rem);line-height:.92;margin:.15em 0}.menu-current p{max-width:680px;color:#d9c9bb;line-height:1.7}.menu-current .gallery{margin-top:28px}
@@ -26,7 +37,7 @@
 .executive-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.executive-card img{height:100%;min-height:360px;object-fit:cover}.executive-copy{background:#efe3d4;padding:clamp(30px,4vw,52px);display:flex;flex-direction:column;justify-content:center}.executive-copy h3{font-size:clamp(2.4rem,4vw,4rem);line-height:.95;margin:.15em 0}.executive-copy p{line-height:1.72}.executive-copy .small-note{font-size:.82rem;color:#69584d}
 .digital-menu{background:linear-gradient(120deg,#4d1719,#270b0d);padding:64px 0}.digital-menu .wrap{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.digital-menu h2{font-size:clamp(2.7rem,4.5vw,4.8rem);line-height:.94;margin:.1em 0}.digital-menu p{max-width:690px;color:#dfd0c3}
 @media(max-width:1000px){.site-header .nav{height:92px;grid-template-columns:190px 1fr auto}.site-header .brand img{height:68px}.reserve-note{display:none}.intro-split,.menu-current .lead-grid,.lunch-intro,.executive-row{grid-template-columns:1fr}.pf-grid-plus{grid-template-columns:repeat(2,1fr)}.digital-menu .wrap{grid-template-columns:1fr}.intro-photo{min-height:400px}}
-@media(max-width:620px){.site-header .nav{height:78px}.site-header .brand img{height:56px}.cardapio-hero{min-height:520px}.cardapio-hero>img{object-position:center 32%;opacity:.72}.intro-copy{padding:42px 22px}.intro-photo{min-height:320px}.pf-grid-plus{grid-template-columns:1fr}.executive-card img{min-height:300px}.lunch-section,.menu-current{padding:58px 0}}
+@media(max-width:620px){.site-header .nav{height:78px}.site-header .brand img{height:56px}.cardapio-hero{min-height:520px}.cardapio-hero>img{width:auto;height:100%;min-width:100%;left:50%;top:50%;transform:translate(-50%,-50%);object-fit:cover;opacity:.72}.intro-copy{padding:42px 22px}.intro-photo{min-height:320px}.pf-grid-plus{grid-template-columns:1fr}.executive-card img{min-height:300px}.lunch-section,.menu-current{padding:58px 0}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Tio Dinho — Cozinha Caipira Contemporânea","url":"https://cozinhaculturaearte.com.br/tiodinho/","image":"https://cozinhaculturaearte.com.br/tiodinho/assets/pato-fogao.webp","telephone":"+55 11 97179-9889","address":{"@type":"PostalAddress","streetAddress":"Rua João Leone, 51 — Sousas","addressLocality":"Campinas","addressRegion":"SP","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"15:00"}],"servesCuisine":["Cozinha caipira contemporânea","Cozinha brasileira"],"sameAs":["https://www.instagram.com/tiodinho_cozinha/"]}</script>
 </head><body>

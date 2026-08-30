@@ -9,18 +9,18 @@
 .reserve-note{font-family:'Libre Franklin',Arial,sans-serif;font-size:.65rem;line-height:1;letter-spacing:.035em;color:#d8c7b5;white-space:nowrap}
 
 .hero-v2{min-height:660px}
-.hero-v2 .hero-copy{max-width:760px;padding:118px 0 72px;margin-left:calc(var(--pad) * -.55)}
+.hero-v2 .hero-copy{max-width:760px;padding:108px 0 66px;margin-left:0}
 .hero-v2 h1{font-size:clamp(4.2rem,6.6vw,6.8rem);line-height:.9;letter-spacing:.02em;margin:8px 0 12px}
 .hero-v2 .hero-kicker{margin:0 0 18px;color:var(--gold2);font-family:'Antonio','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.11em;font-size:clamp(1.15rem,1.8vw,1.55rem)}
 .hero-v2 .lead{max-width:600px;margin-top:0}
 
 .portal-card[href="menu-degustacao.html"] .eyebrow{letter-spacing:.1em}
 
-.feature-split{min-height:430px;grid-template-columns:.92fr 1.08fr}
-.feature-copy{padding:clamp(38px,4.6vw,64px)}
-.feature-copy h2{font-size:clamp(2.8rem,4.4vw,4.7rem);line-height:.92;margin:.18em 0 .12em}
-.feature-copy .feature-kicker{margin:0 0 18px;color:var(--wine);font-family:'Antonio','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(1.05rem,1.5vw,1.3rem)}
-.feature-image img{object-position:center 55%}
+.feature-split{min-height:0;grid-template-columns:.92fr 1.08fr}
+.feature-copy{padding:clamp(28px,3.4vw,46px)}
+.feature-copy h2{font-size:clamp(2.7rem,4vw,4.3rem);line-height:.92;margin:.12em 0 .08em}
+.feature-copy .feature-kicker{margin:0 0 10px;color:var(--wine);font-family:'Antonio','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(1.05rem,1.5vw,1.3rem)}
+.feature-image{height:390px}.feature-image img{height:100%;object-position:center 55%}
 
 
 .story-split{min-height:410px;grid-template-columns:.9fr 1.1fr}
@@ -43,7 +43,9 @@
   .hero-v2{min-height:610px}
   .hero-v2 .hero-copy{padding:100px 0 56px;margin-left:0}
   .hero-v2 h1{font-size:3.65rem}
-  .story-split{grid-template-columns:1fr;min-height:0}
+  .feature-split,.story-split{grid-template-columns:1fr;min-height:0}
+  .feature-image{height:300px}
+  .story-split{min-height:0}
   .story-image{min-height:300px}
   .gold-priority{text-align:center}
 }

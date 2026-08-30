@@ -22,11 +22,11 @@
 
 .portal-card[href="menu-degustacao.html"] .eyebrow{letter-spacing:.1em}
 
-.feature-split{height:400px;min-height:400px;grid-template-columns:1fr 1fr}
-.feature-copy{padding:clamp(28px,3.2vw,44px)}
+.feature-split{height:420px;min-height:420px;grid-template-columns:1fr 1fr;align-items:stretch}
+.feature-copy{height:420px;min-height:420px;padding:clamp(30px,3.3vw,46px);overflow:hidden}
 .feature-copy h2{font-size:clamp(2.7rem,3.8vw,4.1rem);line-height:.92;margin:.12em 0 .06em}
 .feature-copy .feature-kicker{margin:0 0 14px;color:var(--wine);font-family:'Antonio','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(1.05rem,1.5vw,1.3rem)}
-.feature-image{height:400px;min-height:400px}.feature-image img{height:400px;min-height:400px;object-fit:cover;object-position:center 48%}
+.feature-image{height:420px;min-height:420px;overflow:hidden}.feature-image img{display:block;width:100%;height:420px;min-height:420px;object-fit:cover;object-position:center 38%}
 
 
 .story-split{min-height:410px;grid-template-columns:.9fr 1.1fr}
@@ -50,9 +50,10 @@
   .hero-v2 .hero-copy{padding:100px 0 56px;margin-left:0}
   .hero-v2 h1{font-size:3.65rem}
   .feature-split,.story-split{grid-template-columns:1fr;min-height:0}
-  .feature-split{height:auto}
+  .feature-split{height:auto;min-height:0}
   .feature-image{height:320px;min-height:320px}
-  .feature-image img{height:320px;min-height:320px}
+  .feature-image img{height:320px;min-height:320px;object-position:center 38%}
+  .feature-copy{height:auto;min-height:0;overflow:visible}
   .story-split{min-height:0}
   .story-image{min-height:300px}
   .gold-priority{text-align:center}

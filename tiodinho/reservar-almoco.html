@@ -75,5 +75,23 @@ const qs=s=>document.querySelector(s), qsa=s=>[...document.querySelectorAll(s)];
 function updateSummary(){let total=0,items=[];qsa('.qty').forEach(q=>{let n=+q.querySelector('output').textContent;if(n){total+=n;items.push(n+' × '+q.dataset.name)}});qs('#summary').innerHTML=items.length?'<b>Pedido antecipado:</b><br>'+items.join('<br>'):'Nenhum prato selecionado ainda. Você também pode reservar a mesa e escolher os pratos no restaurante.';qs('#mobileCount').textContent=total+' '+(total===1?'prato selecionado':'pratos selecionados')}
 qsa('.qty').forEach(q=>{q.querySelector('.plus').onclick=()=>{q.querySelector('output').textContent=+q.querySelector('output').textContent+1;updateSummary()};q.querySelector('.minus').onclick=()=>{q.querySelector('output').textContent=Math.max(0,+q.querySelector('output').textContent-1);updateSummary()}});
 function sameDayTooLate(){const v=qs('#data').value;if(!v)return false;const now=new Date(),today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');return v===today && now.getHours()>=11}
-qs('#enviar').onclick=function(){const status=qs('#status');if(!qs('#nome').value||!qs('#whatsapp').value||!qs('#data').value){status.textContent='Preencha nome, WhatsApp e data.';return}if(sameDayTooLate()){status.innerHTML='Para reservar para hoje depois das 11h, consulte disponibilidade pelo <a href="https://wa.me/5511971799889" target="_blank"><b>WhatsApp</b></a>.';return}if(qs('#data').value===new Date().toISOString().slice(0,10) && qs('#hora').value==='11:30'){status.textContent='Para reservas feitas no mesmo dia, escolha um horário a partir das 11h45.';return}let items=[];qsa('.qty').forEach(q=>{let n=+q.querySelector('output').textContent;if(n)items.push(n+' × '+q.dataset.name)});let txt='Olá! Gostaria de usar o Família Tio Dinho — Peça antes. Aproveite mais!\n\nNome: '+qs('#nome').value+'\nMesa para: '+qs('#pessoas').value+' pessoas\nData: '+qs('#data').value+'\nHorário: '+qs('#hora').value+'\n\nPedido: '+(items.length?items.join('; '):'Vou escolher no restaurante')+'\n\nRestrições alimentares: '+(qs('#restricoes').value||'Nenhuma informada')+'\nObservações: '+(qs('#obs').value||'Nenhuma');location.href='https://wa.me/5511971799889?text='+encodeURIComponent(txt)};
+const RESERVA_ENDPOINT='https://script.google.com/macros/s/AKfycbz1CuP_3_cLgMVI2-hfNf1ukqnoRizpYsUvO5Mu7LzceSs72NsGH2DVheEYobfw480/exec';
+qs('#enviar').onclick=async function(){
+  const status=qs('#status'),botao=qs('#enviar');
+  if(!qs('#nome').value||!qs('#whatsapp').value||!qs('#data').value){status.textContent='Preencha nome, WhatsApp e data.';return}
+  if(sameDayTooLate()){status.innerHTML='Para reservar para hoje depois das 11h, consulte disponibilidade pelo <a href="https://wa.me/5511971799889" target="_blank"><b>WhatsApp</b></a>.';return}
+  if(qs('#data').value===new Date().toISOString().slice(0,10)&&qs('#hora').value==='11:30'){status.textContent='Para reservas feitas no mesmo dia, escolha um horário a partir das 11h45.';return}
+  let items=[];qsa('.qty').forEach(q=>{let n=+q.querySelector('output').textContent;if(n)items.push(n+' × '+q.dataset.name)});
+  const dados={nome:qs('#nome').value.trim(),whatsapp:qs('#whatsapp').value.trim(),data_reserva:qs('#data').value,horario:qs('#hora').value,pessoas:qs('#pessoas').value,pedido:items,restricoes:qs('#restricoes').value.trim(),observacoes:qs('#obs').value.trim()};
+  botao.disabled=true;status.textContent='Enviando sua reserva...';
+  try{
+    const resposta=await fetch(RESERVA_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(dados)});
+    const retorno=await resposta.json();
+    if(!retorno.ok)throw new Error(retorno.erro||'Falha ao registrar');
+    status.innerHTML='<b>Reserva enviada.</b> Seu pedido foi registrado. Entraremos em contato somente se houver alguma questão com a disponibilidade.';
+    botao.textContent='Reserva enviada';
+  }catch(erro){
+    console.error(erro);status.innerHTML='Não conseguimos registrar a reserva agora. Por favor, envie pelo <a href="https://wa.me/5511971799889" target="_blank"><b>WhatsApp</b></a>.';botao.disabled=false;
+  }
+};
 </script></body></html>

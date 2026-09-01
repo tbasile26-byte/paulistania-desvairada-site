@@ -143,17 +143,11 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 <script>
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx-MNgoT6LdavOZ9CiY4MnoBAYWab8KUnQAQVdGggbZOXaKkqOa4FpTVwhurwIGgp1aHQ/exec";
 const PIX_KEY = "paulistaniadesvairada@gmail.com";
-const CIELO = {
-  "Réquiem para um sonho|Bilhete individual|30":"https://cielolink.com.br/4gpzGNd",
-  "Sabores das ruas|Bilhete individual|80":"https://cielolink.com.br/4cbYtBZ",
-  "Trilhos e Temperos|Bilhete individual|160":"https://cielolink.com.br/4cKDrdO"
-};
-const CIELO_POR_VALOR = {
-  "90":"https://cielolink.com.br/4y7lDSu",
-  "120":"https://cielolink.com.br/4zHMoyx",
-  "150":"https://cielolink.com.br/4xlhz0R",
-  "180":"https://cielolink.com.br/4zKefhv"
-};
+
+const checkoutRef =
+  (window.crypto && crypto.randomUUID)
+    ? crypto.randomUUID()
+    : "pd-" + Date.now() + "-" + Math.random().toString(36).slice(2);
 
 const p = new URLSearchParams(location.search);
 const dados = {
@@ -217,6 +211,8 @@ document.getElementById("confirmReview").addEventListener("click", async ()=>{
  const payload = {
    ...dados,
    ...pendingForm,
+   tipo_formulario:"reserva",
+   referencia_checkout:checkoutRef,
    origem:"Site",
    status_reserva:"Aguardando pagamento",
    situacao_pagamento:"Não pago",
@@ -255,16 +251,28 @@ document.getElementById("choosePix").addEventListener("click", ()=>{
   paymentChoices.style.display="none";
   pixPayment.style.display="block";
   cardPayment.style.display="none";
+
+  fetch(APPS_SCRIPT_URL,{
+    method:"POST",
+    mode:"no-cors",
+    keepalive:true,
+    headers:{"Content-Type":"text/plain;charset=utf-8"},
+    body:JSON.stringify({
+      tipo_formulario:"forma_pagamento",
+      referencia_checkout:checkoutRef,
+      forma_pagamento:"Pix"
+    })
+  }).catch(console.error);
+
   pixPayment.scrollIntoView({behavior:"smooth",block:"center"});
 });
 
 document.getElementById("chooseCard").addEventListener("click", ()=>{
-  const key=[dados.experiencia,dados.bilhete,dados.valor].join("|");
-  const destino = CIELO[key] || CIELO_POR_VALOR[dados.valor];
-  if(!destino){
-    alert("Não encontramos o link de pagamento desta opção. Entre em contato com a Paulistânia Desvairada.");
-    return;
-  }
+  const destino =
+    APPS_SCRIPT_URL +
+    "?acao=pagamento_cielo&ref=" +
+    encodeURIComponent(checkoutRef);
+
   document.getElementById("cardPayBtn").href=destino;
   paymentChoices.style.display="none";
   cardPayment.style.display="block";

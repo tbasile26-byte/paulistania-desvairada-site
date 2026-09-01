@@ -276,51 +276,31 @@ document.getElementById("chooseCard").addEventListener("click", ()=>{
   cardPayment.scrollIntoView({behavior:"smooth",block:"center"});
 });
 
-function pedirLinkCielo(ref){
-  return new Promise((resolve,reject)=>{
-    const callbackName = "cieloCallback_" + Date.now() + "_" + Math.random().toString(36).slice(2);
-    const script = document.createElement("script");
-    let finalizado = false;
+async function pedirLinkCielo(ref){
+  const resposta = await fetch(
+    "/api/pagamento-cielo?ref=" + encodeURIComponent(ref) + "&_=" + Date.now(),
+    {
+      method: "GET",
+      cache: "no-store",
+      headers: { "Accept": "application/json" }
+    }
+  );
 
-    const limpar = ()=>{
-      if(script.parentNode) script.parentNode.removeChild(script);
-      try{ delete window[callbackName]; }catch(e){ window[callbackName] = undefined; }
-    };
+  let dadosResposta = null;
+  try{
+    dadosResposta = await resposta.json();
+  }catch(e){
+    throw new Error("O serviço de pagamento respondeu de forma inesperada.");
+  }
 
-    const timer = setTimeout(()=>{
-      if(finalizado) return;
-      finalizado = true;
-      limpar();
-      reject(new Error("Tempo esgotado ao abrir o pagamento."));
-    }, 20000);
+  if(!resposta.ok || !dadosResposta || !dadosResposta.ok || !dadosResposta.url){
+    throw new Error(
+      (dadosResposta && dadosResposta.erro) ||
+      "Não foi possível gerar o pagamento."
+    );
+  }
 
-    window[callbackName] = (resposta)=>{
-      if(finalizado) return;
-      finalizado = true;
-      clearTimeout(timer);
-      limpar();
-      if(resposta && resposta.ok && resposta.url){
-        resolve(resposta.url);
-      }else{
-        reject(new Error((resposta && resposta.erro) || "Não foi possível gerar o pagamento."));
-      }
-    };
-
-    script.onerror = ()=>{
-      if(finalizado) return;
-      finalizado = true;
-      clearTimeout(timer);
-      limpar();
-      reject(new Error("Não foi possível conectar ao serviço de pagamento."));
-    };
-
-    script.src = APPS_SCRIPT_URL +
-      "?acao=link_cielo_jsonp&ref=" + encodeURIComponent(ref) +
-      "&callback=" + encodeURIComponent(callbackName) +
-      "&_=" + Date.now();
-
-    document.head.appendChild(script);
-  });
+  return dadosResposta.url;
 }
 
 document.getElementById("cardPayBtn").addEventListener("click", async ()=>{

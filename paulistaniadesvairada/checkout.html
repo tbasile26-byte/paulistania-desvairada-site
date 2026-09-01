@@ -11,7 +11,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.96);backdro
 .navlinks a:hover,.active{color:var(--orange)}
 .navcta{border:1.5px solid var(--orange);color:var(--orange);padding:11px 14px;font-size:11px;font-weight:900;text-transform:uppercase}
 .hero{padding:52px 0 48px;background:#fff}.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:center}
-.eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);margin-bottom:12px}
+.eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#333;margin-bottom:12px}.summarybox .eyebrow{color:#ddd}
 h1,h2,h3{margin-top:0}h1{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:clamp(48px,6vw,82px);line-height:.94;letter-spacing:-.025em;margin-bottom:18px}
 h2{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;font-size:clamp(34px,4.6vw,60px);line-height:.98;margin-bottom:22px}
 h3{font-size:22px}.lead{font-family:Georgia,serif;font-size:clamp(21px,2.1vw,30px);line-height:1.25;margin:0 0 18px}
@@ -22,7 +22,7 @@ section{padding:66px 0;border-top:1px solid var(--line)}.white{background:#fff}.
 .card p{line-height:1.55;color:#3f3b36}.dark .card p{color:#ddd}
 .tag{display:inline-block;color:var(--orange);font-weight:900;text-transform:uppercase;font-size:11px;letter-spacing:.08em;margin-bottom:8px}
 .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);border:1px solid var(--orange);color:#fff;padding:14px 18px;font-size:12px;font-weight:900;text-transform:uppercase}
-.btn.ghost{background:transparent;color:var(--orange)}
+.btn.ghost{background:transparent;color:#111;border-color:#111}
 .quote{font-family:Georgia,serif;font-size:clamp(30px,4.8vw,58px);line-height:1.1;margin:0;max-width:980px}
 .list{font-size:18px;line-height:1.65;padding-left:20px}
 .faq details{padding:18px 0;border-top:1px solid var(--line)}.faq details:last-child{border-bottom:1px solid var(--line)}
@@ -39,8 +39,8 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 .summarybox{background:#111;color:#fff;padding:24px;margin-bottom:24px}.summarybox strong{font-size:26px}
 .paychoices{display:grid;grid-template-columns:1fr 1fr;gap:14px}.paychoice{border:1px solid var(--line);background:#fff;padding:18px}
 .small{font-size:13px;color:var(--muted);line-height:1.5}.dark .small{color:#bbb}
-.steps{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.step{padding:9px 12px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:900;text-transform:uppercase}.step.current{background:#111;color:#fff;border-color:#111}.payment-step{display:none;margin-top:26px;padding:24px;border:1px solid var(--line);background:#fff}.payment-step.active{display:block}.payment-step h3{margin-bottom:10px}.pix-box{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0}.pix-key{flex:1;min-width:260px;padding:14px;border:1px solid #bbb;background:var(--soft);font-size:17px;font-weight:700;word-break:break-all}.btn.secondary{background:#111;border-color:#111}.success-note{border-left:4px solid var(--orange);padding:14px 16px;background:var(--soft);margin:0 0 18px}.copy-status{font-size:13px;font-weight:700;margin-top:8px;min-height:20px}
-@media(max-width:900px){.navlinks{display:none}.nav{height:70px}.logo{width:98px}.hero-grid,.grid2,.grid3,.grid4,.formrow,.paychoices{grid-template-columns:1fr}.heroimg{height:420px}}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px}.step{padding:9px 12px;border:1px solid var(--line);background:#fff;font-size:12px;font-weight:900;text-transform:uppercase}.step.current{background:#111;color:#fff;border-color:#111}.review-step,.payment-step{display:none;margin-top:26px;padding:24px;border:1px solid var(--line);background:#fff}.review-step.active,.payment-step.active{display:block}.payment-step h3{margin-bottom:10px}.pix-box{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin:16px 0}.pix-key{flex:1;min-width:260px;padding:14px;border:1px solid #bbb;background:var(--soft);font-size:17px;font-weight:700;word-break:break-all}.btn.secondary{background:#111;border-color:#111}.success-note{border-left:4px solid var(--orange);padding:14px 16px;background:var(--soft);margin:0 0 18px}.copy-status{font-size:13px;font-weight:700;margin-top:8px;min-height:20px}.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.review-item{padding:14px;border:1px solid var(--line);background:var(--soft)}.review-item.full{grid-column:1/-1}.review-label{display:block;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--muted);margin-bottom:5px}.review-value{font-size:17px;line-height:1.4}.review-total{font-size:22px;font-weight:900}.review-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+@media(max-width:900px){.navlinks{display:none}.nav{height:70px}.logo{width:98px}.hero-grid,.grid2,.grid3,.grid4,.formrow,.paychoices,.review-grid{grid-template-columns:1fr}.review-item.full{grid-column:auto}.heroimg{height:420px}}
 @media(max-width:620px){.wrap{width:min(100% - 24px,1160px)}section{padding:48px 0}.hero{padding-top:28px}.heroimg{height:330px}}
 </style></head><body>
 <header><div class="wrap nav">
@@ -63,8 +63,8 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 <div class="steps" aria-label="Etapas da reserva">
   <div class="step current" id="step1">1. Seus dados</div>
   <div class="step" id="step2">2. Pagamento</div>
-  <div class="step" id="step3">3. Confirmação</div>
 </div>
+<p class="small" style="margin-top:-12px;margin-bottom:24px">São apenas <strong>duas etapas no site</strong>. Depois do pagamento, nós identificaremos o recebimento e enviaremos a confirmação da reserva por e-mail ou WhatsApp.</p>
 
 <div class="notice" style="margin:0 0 24px">
 <strong>Importante:</strong> o preenchimento do formulário registra a solicitação de reserva, mas <strong>a vaga só é garantida após a confirmação do pagamento</strong>.
@@ -78,12 +78,35 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 <div class="field"><label>Observações</label><textarea name="observacoes"></textarea></div>
 <div class="field"><label><input style="width:auto;margin-right:8px" type="checkbox" required> Li as informações da experiência e a Política de Compras.</label></div>
 
-<p><button class="btn" type="submit">Registrar meus dados e prosseguir para o pagamento</button></p>
-<p class="small">Ao clicar, seus dados serão registrados. Na etapa seguinte você escolherá entre Pix e cartão. <strong>Sua reserva só será confirmada após a confirmação do pagamento.</strong></p>
+<p><button class="btn" type="submit">Registrar meus dados e revisar reserva</button></p>
+<p class="small">Na próxima tela, confira cuidadosamente os dados da reserva antes de escolher a forma de pagamento. <strong>Sua vaga só será confirmada após a confirmação do pagamento.</strong></p>
 </form>
 
+<div id="reviewStep" class="review-step" aria-live="polite">
+  <h3>Revise sua reserva</h3>
+  <p>Confira os dados abaixo antes de seguir para o pagamento. Se precisar alterar alguma informação, volte e faça a correção.</p>
+  <div class="review-grid">
+    <div class="review-item"><span class="review-label">Experiência</span><span class="review-value" id="revExperiencia"></span></div>
+    <div class="review-item"><span class="review-label">Data</span><span class="review-value" id="revData"></span></div>
+    <div class="review-item"><span class="review-label">Bilhete</span><span class="review-value" id="revBilhete"></span></div>
+    <div class="review-item"><span class="review-label">Quantidade de lugares</span><span class="review-value" id="revQuantidade"></span></div>
+    <div class="review-item"><span class="review-label">Valor por pessoa</span><span class="review-value" id="revUnitario"></span></div>
+    <div class="review-item"><span class="review-label">Valor total</span><span class="review-value review-total" id="revTotal"></span></div>
+    <div class="review-item"><span class="review-label">Nome</span><span class="review-value" id="revNome"></span></div>
+    <div class="review-item"><span class="review-label">E-mail</span><span class="review-value" id="revEmail"></span></div>
+    <div class="review-item"><span class="review-label">WhatsApp</span><span class="review-value" id="revWhatsapp"></span></div>
+    <div class="review-item"><span class="review-label">Restrição alimentar</span><span class="review-value" id="revRestricao"></span></div>
+    <div class="review-item full"><span class="review-label">Observações</span><span class="review-value" id="revObservacoes"></span></div>
+  </div>
+  <div class="review-actions">
+    <button class="btn ghost" id="editReview" type="button">Voltar e corrigir meus dados</button>
+    <button class="btn" id="confirmReview" type="button">Está tudo certo: escolher pagamento</button>
+  </div>
+  <p class="small" style="margin-top:16px"><strong>Importante:</strong> confirmar os dados ainda não garante a vaga. A reserva será confirmada após identificarmos o pagamento.</p>
+</div>
+
 <div id="paymentStep" class="payment-step" aria-live="polite">
-  <div class="success-note"><strong>Dados registrados!</strong><br>Agora escolha como deseja pagar. Sua vaga ainda não está confirmada.</div>
+  <div class="success-note"><strong>Dados conferidos e registrados!</strong><br>Agora escolha como deseja pagar. Sua vaga ainda não está confirmada.</div>
 
   <h3>Como você deseja pagar?</h3>
   <div class="paychoices" id="paymentChoices">
@@ -97,14 +120,14 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 
   <div id="pixPayment" style="display:none;margin-top:24px">
     <h3>Pagamento por Pix</h3>
-    <p>1. Clique em <strong>Copiar chave Pix</strong>.<br>2. Abra o aplicativo do seu banco e faça um Pix para esta chave.<br>3. A reserva será confirmada após identificarmos o pagamento.</p>
+    <p>1. Clique em <strong>Copiar chave Pix</strong>.<br>2. Abra o aplicativo do seu banco e faça um Pix para esta chave no <strong>valor total indicado abaixo</strong>.<br>3. A reserva será confirmada em seu e-mail ou WhatsApp em até dois dias úteis assim que identificarmos o pagamento. Caso não receba nenhuma confirmação, entre em contato.</p>
     <div class="pix-box">
       <div class="pix-key" id="pixKeyText">paulistaniadesvairada@gmail.com</div>
       <button class="btn secondary" id="copyPixBtn" type="button">Copiar chave Pix</button>
     </div>
     <div class="copy-status" id="copyStatus"></div>
-    <p><strong>Valor:</strong> <span id="pixAmount"></span></p>
-    <p class="small"><strong>Importante:</strong> o registro dos seus dados não garante a vaga. Sua reserva será confirmada somente após a confirmação do pagamento.</p>
+    <p><strong>Valor total do Pix:</strong> <span id="pixAmount"></span></p>
+    <p class="small"><strong>Importante:</strong> o registro dos seus dados não garante a vaga. A reserva será confirmada em seu e-mail ou WhatsApp em até dois dias úteis assim que identificarmos o pagamento. Caso não receba nenhuma confirmação, entre em contato.</p>
     <p><button class="btn ghost" id="backPayment" type="button">Escolher outra forma de pagamento</button></p>
   </div>
 
@@ -112,7 +135,7 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
     <h3>Pagamento com cartão</h3>
     <p>Seus dados já foram registrados. Clique no botão abaixo para fazer o pagamento com cartão pela Cielo.</p>
     <p><a class="btn" id="cardPayBtn" href="#">Ir para o pagamento no cartão</a></p>
-    <p class="small"><strong>Importante:</strong> sua reserva será confirmada somente após a confirmação do pagamento.</p>
+    <p class="small"><strong>Importante:</strong> a reserva será confirmada em seu e-mail ou WhatsApp em até dois dias úteis assim que identificarmos o pagamento. Caso não receba nenhuma confirmação, entre em contato.</p>
     <p><button class="btn ghost" id="backPaymentCard" type="button">Escolher outra forma de pagamento</button></p>
   </div>
 </div></div>
@@ -144,21 +167,65 @@ document.getElementById("sumCat").textContent = dados.categoria || "Experiência
 document.getElementById("sumTitle").textContent = dados.experiencia || "Selecione uma experiência";
 document.getElementById("sumMeta").textContent = [dados.data, dados.bilhete, dados.valor ? "R$ "+dados.valor : ""].filter(Boolean).join(" · ") || "Os dados serão preenchidos automaticamente pelo botão de compra.";
 
-document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
+let pendingForm = null;
+let pendingTotal = 0;
+
+function moeda(v){
+  return Number(v || 0).toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
+}
+
+document.getElementById("reservaForm").addEventListener("submit", (e)=>{
  e.preventDefault();
- const form = Object.fromEntries(new FormData(e.currentTarget).entries());
+ pendingForm = Object.fromEntries(new FormData(e.currentTarget).entries());
+ const quantidade = Math.max(1, Number(pendingForm.quantidade) || 1);
+ const valorUnitario = Number(String(dados.valor).replace(",",".")) || 0;
+ pendingTotal = valorUnitario * quantidade;
+
+ document.getElementById("revExperiencia").textContent = dados.experiencia || "—";
+ document.getElementById("revData").textContent = dados.data || "—";
+ document.getElementById("revBilhete").textContent = dados.bilhete || "—";
+ document.getElementById("revQuantidade").textContent = quantidade;
+ document.getElementById("revUnitario").textContent = valorUnitario ? moeda(valorUnitario) : "—";
+ document.getElementById("revTotal").textContent = pendingTotal ? moeda(pendingTotal) : "—";
+ document.getElementById("revNome").textContent = pendingForm.nome || "—";
+ document.getElementById("revEmail").textContent = pendingForm.email || "—";
+ document.getElementById("revWhatsapp").textContent = pendingForm.whatsapp || "—";
+ document.getElementById("revRestricao").textContent = pendingForm.tem_restricao === "Sim" ? (pendingForm.restricao || "Sim, não informada") : "Não";
+ document.getElementById("revObservacoes").textContent = pendingForm.observacoes || "Nenhuma";
+
+ e.currentTarget.style.display = "none";
+ document.getElementById("reviewStep").classList.add("active");
+ document.getElementById("step1").classList.remove("current");
+ document.getElementById("step2").classList.add("current");
+ document.getElementById("reviewStep").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.getElementById("editReview").addEventListener("click", ()=>{
+  document.getElementById("reviewStep").classList.remove("active");
+  document.getElementById("reservaForm").style.display = "block";
+  document.getElementById("step2").classList.remove("current");
+  document.getElementById("step1").classList.add("current");
+  document.getElementById("reservaForm").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.getElementById("confirmReview").addEventListener("click", async ()=>{
+ if(!pendingForm) return;
+ const btn = document.getElementById("confirmReview");
+ btn.disabled = true;
+ const original = btn.textContent;
+ btn.textContent = "Registrando...";
  const payload = {
    ...dados,
-   ...form,
+   ...pendingForm,
    origem:"Site",
    status_reserva:"Aguardando pagamento",
    situacao_pagamento:"Não pago",
-   forma_pagamento: "A definir"
+   forma_pagamento:"A definir"
  };
  const endpointAtivo = APPS_SCRIPT_URL && APPS_SCRIPT_URL.startsWith("https://script.google.com/");
  if(!endpointAtivo){
    alert("A integração com a planilha ainda precisa ser ativada. Entre em contato com a Paulistânia Desvairada.");
-   return;
+   btn.disabled = false; btn.textContent = original; return;
  }
  try{
    await fetch(APPS_SCRIPT_URL,{
@@ -171,14 +238,12 @@ document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  }catch(err){
    console.error(err);
    alert("Não foi possível registrar seus dados. Tente novamente.");
-   return;
+   btn.disabled = false; btn.textContent = original; return;
  }
+ document.getElementById("pixAmount").textContent = pendingTotal ? moeda(pendingTotal) : "consulte o valor acima";
+ document.getElementById("reviewStep").classList.remove("active");
  const paymentStep = document.getElementById("paymentStep");
  paymentStep.classList.add("active");
- e.currentTarget.style.display = "none";
- document.getElementById("step1").classList.remove("current");
- document.getElementById("step2").classList.add("current");
- document.getElementById("pixAmount").textContent = dados.valor ? "R$ "+dados.valor : "consulte o valor acima";
  paymentStep.scrollIntoView({behavior:"smooth",block:"start"});
 });
 

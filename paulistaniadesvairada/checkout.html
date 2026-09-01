@@ -41,23 +41,9 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 .small{font-size:13px;color:var(--muted);line-height:1.5}.dark .small{color:#bbb}
 @media(max-width:900px){.navlinks{display:none}.nav{height:70px}.logo{width:98px}.hero-grid,.grid2,.grid3,.grid4,.formrow,.paychoices{grid-template-columns:1fr}.heroimg{height:420px}}
 @media(max-width:620px){.wrap{width:min(100% - 24px,1160px)}section{padding:48px 0}.hero{padding-top:28px}.heroimg{height:330px}}
-</style>
-<link rel="canonical" href="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/checkout.html">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Paulistânia Desvairada">
-<meta property="og:title" content="Compra | Paulistânia Desvairada">
-<meta property="og:description" content="Formulário de reserva e pagamento das experiências da Paulistânia Desvairada.">
-<meta property="og:url" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/checkout.html">
-<meta property="og:image" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Compra | Paulistânia Desvairada">
-<meta name="twitter:description" content="Formulário de reserva e pagamento das experiências da Paulistânia Desvairada.">
-<meta name="twitter:image" content="https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Paulistânia Desvairada","url":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/","logo":"https://www.cozinhaculturaearte.com.br/paulistaniadesvairada/assets/logo.png","email":"paulistaniadesvairada@gmail.com","telephone":"+55 11 97179-9889","sameAs":["https://www.instagram.com/paulistaniadesvairada/"]}</script>
-</head><body>
+</style></head><body>
 <header><div class="wrap nav">
-<a href="index.html"><img decoding="async" class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
+<a href="index.html"><img class="logo" src="assets/logo.png" alt="Paulistânia Desvairada"></a>
 <nav class="navlinks">
 <a href="experiencias.html">Experiências</a>
 <a href="agenda.html">Agenda</a>
@@ -88,10 +74,10 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
 <h3>Forma de pagamento</h3>
 <div class="paychoices">
 <label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="cielo" checked> <strong>Cartão · Cielo</strong><br><span class="small">Você será encaminhado ao link de pagamento da experiência.</span></label>
-<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="pix"> <strong>Pix</strong><br><span class="small">Chave: paulistaniadesvairada@gmail.com</span><br><button type="button" id="copyPixBtn" style="margin-top:10px;padding:9px 12px;border:1px solid #161616;background:#fff;cursor:pointer;font-weight:700">Copiar chave Pix</button></label>
+<label class="paychoice"><input style="width:auto" type="radio" name="pagamento" value="pix"> <strong>Pix</strong><br><span class="small">Chave: paulistaniadesvairada@gmail.com</span></label>
 </div>
-<p><button class="btn" type="submit">Registrar reserva e continuar</button></p>
-<p class="small">Seus dados serão registrados para identificação da reserva. A vaga só é confirmada após a confirmação do pagamento.</p>
+<p><button class="btn" type="submit">Registrar meus dados e prosseguir para o pagamento</button></p>
+<p class="small">Primeiro, registraremos seus dados. Em seguida, você receberá as instruções para fazer o pagamento. Sua reserva será confirmada somente após a confirmação do pagamento.</p>
 </form>
 </div></section></main>
 <script>
@@ -108,20 +94,6 @@ const CIELO_POR_VALOR = {
   "150":"https://cielolink.com.br/4xlhz0R",
   "180":"https://cielolink.com.br/4zKefhv"
 };
-
-const copyPixBtn=document.getElementById("copyPixBtn");
-if(copyPixBtn){
- copyPixBtn.addEventListener("click", async ()=>{
-   try{
-     await navigator.clipboard.writeText(PIX_KEY);
-     const original=copyPixBtn.textContent;
-     copyPixBtn.textContent="Chave copiada ✓";
-     setTimeout(()=>copyPixBtn.textContent=original,2200);
-   }catch(err){
-     window.prompt("Copie a chave Pix:", PIX_KEY);
-   }
- });
-}
 
 const p = new URLSearchParams(location.search);
 const dados = {
@@ -166,7 +138,7 @@ document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  }
  if(form.pagamento==="pix"){
    try{await navigator.clipboard.writeText(PIX_KEY)}catch(e){}
-   alert("Pedido de reserva recebido!\n\nA chave Pix foi copiada: "+PIX_KEY+"\n\nAssim que identificarmos seu pagamento, enviaremos a confirmação da sua vaga pelo WhatsApp informado no cadastro. Sua reserva estará confirmada somente após essa mensagem.");
+   alert("Dados registrados! Agora falta apenas o pagamento.\n\nChave Pix: "+PIX_KEY+"\n\nSua reserva será confirmada somente após a confirmação do pagamento.");
  }else{
    const key=[dados.experiencia,dados.bilhete,dados.valor].join("|");
    const destino = CIELO[key] || CIELO_POR_VALOR[dados.valor];

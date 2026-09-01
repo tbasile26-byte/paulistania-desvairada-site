@@ -134,7 +134,8 @@ input,select,textarea{width:100%;padding:13px 12px;border:1px solid #bbb;backgro
   <div id="cardPayment" style="display:none;margin-top:24px">
     <h3>Pagamento com cartão</h3>
     <p>Seus dados já foram registrados. Clique no botão abaixo para fazer o pagamento com cartão pela Cielo.</p>
-    <p><a class="btn" id="cardPayBtn" href="#">Ir para o pagamento no cartão</a></p>
+    <p><button class="btn" id="cardPayBtn" type="button">Ir para o pagamento no cartão</button></p>
+    <p class="small" id="cardStatus" aria-live="polite"></p>
     <p class="small"><strong>Importante:</strong> a reserva será confirmada em seu e-mail ou WhatsApp em até dois dias úteis assim que identificarmos o pagamento. Caso não receba nenhuma confirmação, entre em contato.</p>
     <p><button class="btn ghost" id="backPaymentCard" type="button">Escolher outra forma de pagamento</button></p>
   </div>
@@ -268,16 +269,79 @@ document.getElementById("choosePix").addEventListener("click", ()=>{
 });
 
 document.getElementById("chooseCard").addEventListener("click", ()=>{
-  const destino =
-    APPS_SCRIPT_URL +
-    "?acao=pagamento_cielo&ref=" +
-    encodeURIComponent(checkoutRef);
-
-  document.getElementById("cardPayBtn").href=destino;
   paymentChoices.style.display="none";
   cardPayment.style.display="block";
   pixPayment.style.display="none";
+  document.getElementById("cardStatus").textContent = "";
   cardPayment.scrollIntoView({behavior:"smooth",block:"center"});
+});
+
+function pedirLinkCielo(ref){
+  return new Promise((resolve,reject)=>{
+    const callbackName = "cieloCallback_" + Date.now() + "_" + Math.random().toString(36).slice(2);
+    const script = document.createElement("script");
+    let finalizado = false;
+
+    const limpar = ()=>{
+      if(script.parentNode) script.parentNode.removeChild(script);
+      try{ delete window[callbackName]; }catch(e){ window[callbackName] = undefined; }
+    };
+
+    const timer = setTimeout(()=>{
+      if(finalizado) return;
+      finalizado = true;
+      limpar();
+      reject(new Error("Tempo esgotado ao abrir o pagamento."));
+    }, 20000);
+
+    window[callbackName] = (resposta)=>{
+      if(finalizado) return;
+      finalizado = true;
+      clearTimeout(timer);
+      limpar();
+      if(resposta && resposta.ok && resposta.url){
+        resolve(resposta.url);
+      }else{
+        reject(new Error((resposta && resposta.erro) || "Não foi possível gerar o pagamento."));
+      }
+    };
+
+    script.onerror = ()=>{
+      if(finalizado) return;
+      finalizado = true;
+      clearTimeout(timer);
+      limpar();
+      reject(new Error("Não foi possível conectar ao serviço de pagamento."));
+    };
+
+    script.src = APPS_SCRIPT_URL +
+      "?acao=link_cielo_jsonp&ref=" + encodeURIComponent(ref) +
+      "&callback=" + encodeURIComponent(callbackName) +
+      "&_=" + Date.now();
+
+    document.head.appendChild(script);
+  });
+}
+
+document.getElementById("cardPayBtn").addEventListener("click", async ()=>{
+  const btn = document.getElementById("cardPayBtn");
+  const status = document.getElementById("cardStatus");
+  const original = btn.textContent;
+
+  btn.disabled = true;
+  btn.textContent = "Abrindo pagamento seguro...";
+  status.textContent = "Conectando à Cielo. Aguarde alguns segundos.";
+
+  try{
+    const url = await pedirLinkCielo(checkoutRef);
+    status.textContent = "Pagamento pronto. Abrindo a Cielo...";
+    window.location.assign(url);
+  }catch(err){
+    console.error(err);
+    status.textContent = err.message || "Não foi possível abrir o pagamento. Tente novamente.";
+    btn.disabled = false;
+    btn.textContent = original;
+  }
 });
 
 function voltarPagamento(){

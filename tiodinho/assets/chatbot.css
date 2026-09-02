@@ -1,0 +1,20 @@
+.td-chatbot{position:fixed;right:22px;bottom:22px;z-index:9999;font-family:inherit;color:#30261e}
+.td-chatbot__toggle{border:0;border-radius:999px;background:#6f1d2c;color:#fff;padding:13px 19px;font:700 15px/1 inherit;box-shadow:0 5px 18px rgba(0,0,0,.24);cursor:pointer}
+.td-chatbot__panel{position:absolute;right:0;bottom:58px;width:min(380px,calc(100vw - 28px));max-height:min(620px,calc(100vh - 100px));display:none;grid-template-rows:auto minmax(130px,1fr) auto;background:#fffaf0;border:1px solid #b69a67;border-radius:14px;box-shadow:0 12px 35px rgba(38,27,20,.3);overflow:hidden}
+.td-chatbot.is-open .td-chatbot__panel{display:grid}
+.td-chatbot__header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#6f1d2c;color:#fff}
+.td-chatbot__title{margin:0;font-size:17px}
+.td-chatbot__close{border:0;background:transparent;color:#fff;font-size:25px;line-height:1;cursor:pointer}
+.td-chatbot__messages{padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+.td-chatbot__message{max-width:88%;padding:10px 12px;border-radius:12px;background:#eee2ca;white-space:pre-line;line-height:1.42}
+.td-chatbot__message--user{align-self:flex-end;background:#6f1d2c;color:#fff}
+.td-chatbot__actions,.td-chatbot__shortcuts{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+.td-chatbot__action,.td-chatbot__shortcut{border:1px solid #8f6c31;border-radius:999px;background:#fffaf0;color:#6f1d2c;padding:7px 10px;font:600 13px/1.2 inherit;text-decoration:none;cursor:pointer}
+.td-chatbot__composer{border-top:1px solid #d8c5a2;padding:10px;background:#fff}
+.td-chatbot__form{display:flex;gap:7px}
+.td-chatbot__input{min-width:0;flex:1;border:1px solid #9c8768;border-radius:8px;padding:10px;font:inherit}
+.td-chatbot__send{border:0;border-radius:8px;background:#6f1d2c;color:#fff;padding:0 13px;font-weight:700;cursor:pointer}
+.td-chatbot__status{min-height:18px;margin:6px 2px 0;color:#6d5a46;font-size:12px}
+.td-chatbot .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.td-chatbot button:focus-visible,.td-chatbot input:focus-visible,.td-chatbot a:focus-visible{outline:3px solid #d3a532;outline-offset:2px}
+@media (max-width:600px){.td-chatbot{right:14px;bottom:14px}.td-chatbot__panel{position:fixed;inset:12px;width:auto;max-height:none}.td-chatbot__toggle{padding:12px 16px}}

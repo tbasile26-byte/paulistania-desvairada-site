@@ -11,4 +11,8 @@
   if(instagram) footerLinks.insertBefore(politica,instagram);
   else footerLinks.appendChild(politica);
  }
+ const siteScript=[...document.scripts].find(script=>/\/assets\/site\.js(?:\?|$)/.test(script.src));
+ const assetBase=siteScript?siteScript.src.replace(/site\.js(?:\?.*)?$/,''):'assets/';
+ const chatbotStyle=document.createElement('link');chatbotStyle.rel='stylesheet';chatbotStyle.href=assetBase+'chatbot.css';document.head.appendChild(chatbotStyle);
+ const chatbotData=document.createElement('script');chatbotData.src=assetBase+'chatbot-data.js';chatbotData.onload=()=>{const chatbot=document.createElement('script');chatbot.src=assetBase+'chatbot.js';document.body.appendChild(chatbot)};document.body.appendChild(chatbotData);
 })();

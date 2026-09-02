@@ -4,6 +4,16 @@
   validDates:['2026-09-04','2026-09-11','2026-09-18','2026-09-25','2026-10-02','2026-10-09','2026-10-16','2026-10-23'],
   greeting:'Oi! Que bom ter você por aqui 😊 Posso ajudar com o cardápio, reservas, menu degustação, horários e outras dúvidas. O que você gostaria de saber?',fallback:'Ainda não encontrei essa informação com segurança. Se quiser, nossa equipe pode ajudar pelo WhatsApp 😊',
   shortcuts:['Como reservar?','Tem vaga no menu degustação?','Quem é o chef?','Como funciona o menu?','Ver cardápio','Horários','Onde fica?'],
+  recommendations:[
+   {tags:['vegetariano','vegetariana','sem carne','cogumelo','leve'],name:'Eryngui',description:'cogumelo grelhado com arroz ao tarê caipira, fruta silvestre, amendoim tostado e vegetais do dia'},
+   {tags:['vegetal','horta','vegano','vegana','surpresa'],name:'Da Quitanda',description:'você escolhe um vegetal fresco e a cozinha o prepara na hora com acompanhamentos que mudam conforme a colheita'},
+   {tags:['carne','bife','angus','fome','caprichado'],name:'Marvada Carne',description:'bife de tira Angus, glace, mandioca na manteiga defumada e vegetais do dia'},
+   {tags:['porco','suino','suíno','agridoce','diferente'],name:'Carne de sol suína',description:'chorizo suíno com glace de cajuína, farofa de rapadura e vegetais do dia'},
+   {tags:['pato','arroz','autoral','especial','elaborado'],name:'Arroz de pato',description:'pato caipira desfiado, arroz com caldo intenso, glace, azeite de rúcula, mel de abelha nativa e cenoura glaceada'},
+   {tags:['brasileiro','brasileira','caipira','casa','representativo','aventura','surpreenda'],name:'Virado à Paulistânia',description:'linguiça de camarão com porco, barriga grelhada, arroz, feijão, farofa, folha verde e ovo'},
+   {tags:['frango','conforto','conhecido','tradicional','criança','crianca'],name:'Frango à parmegiana',description:'frango empanado em farinha de milho, molho de tomate, queijo gratinado, arroz e batata rústica'},
+   {tags:['rapido','rápido','trabalho','economico','econômico','executivo'],name:'Menu executivo',description:'uma escolha prática com arroz, feijão e farofa; há opções como omelete, frango, pernil e bife de tira'}
+  ],
   knowledge:[
    {id:'reserva',keywords:['como reservar','reserva','reservar','quero uma mesa'],answer:'Para o almoço, você pode reservar a mesa e, se quiser, antecipar os pratos pela página de reservas. Para o menu degustação “Primaveras de uma vida”, a reserva deve ser feita pelo formulário com pelo menos 2 dias de antecedência.',followUp:'Você está pensando em reservar o almoço ou o menu degustação?',link:{label:'Reservar almoço',href:'reservar-almoco.html'}},
    {id:'menu',keywords:['como funciona o menu','menu degustação','menu degustacao','menu com literatura','literatura','primaveras de uma vida','jantar literário','jantar literario'],answer:'“Primaveras de uma vida” é um jantar em 10 etapas que aproxima pratos, décadas da vida e trechos literários. Cada pessoa recebe um livreto e vive a experiência no ritmo da própria mesa — não é sarau nem atividade coletiva. A duração prevista é de 1h30 a 2h.',followUp:'Que tal consultar as próximas datas e ver se há lugar para você? ✨',next:'availability',link:{label:'Conhecer o menu',href:'primaveras-de-uma-vida.html'}},

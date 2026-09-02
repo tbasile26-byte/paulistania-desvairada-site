@@ -1,6 +1,6 @@
 (function(){
  window.TioDinhoChatbotData={
-  endpoint:'https://script.google.com/macros/s/AKfycbx3SxEiRSI2komamNn303Smrbqp86mWW7GvIYcEr4LHObueaEkQOleGrx_uEbhO4BiLZw/exec',noticesAction:'informacoes_chatbot',whatsapp:'https://wa.me/5511971799889',reservationUrl:'primaveras-de-uma-vida.html#reservar',
+  endpoint:'https://script.google.com/macros/s/AKfycbx3SxEiRSI2komamNn303Smrbqp86mWW7GvIYcEr4LHObueaEkQOleGrx_uEbhO4BiLZw/exec',noticesEndpoint:'https://script.google.com/macros/s/AKfycbwzMpb2-4dXB_rY5EhQ8Coav94G_8gbGSs6FlAobujeEFPNRK-tY7RnLTxQ8vZju-OMRQ/exec',noticesAction:'informacoes_chatbot',whatsapp:'https://wa.me/5511971799889',reservationUrl:'primaveras-de-uma-vida.html#reservar',
   validDates:['2026-09-04','2026-09-11','2026-09-18','2026-09-25','2026-10-02','2026-10-09','2026-10-16','2026-10-23'],
   greeting:'Oi! Que bom ter você por aqui 😊 Posso ajudar com o cardápio, reservas, menu degustação, horários e outras dúvidas. O que você gostaria de saber?',fallback:'Ainda não encontrei essa informação com segurança. Se quiser, nossa equipe pode ajudar pelo WhatsApp 😊',
   shortcuts:['Como reservar?','Tem vaga no menu degustação?','Quem é o chef?','Como funciona o menu?','Ver cardápio','Horários','Onde fica?'],

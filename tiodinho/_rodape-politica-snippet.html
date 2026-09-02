@@ -1,0 +1,12 @@
+<script>
+(function(){
+  var links=document.querySelector('.site-footer .footer-links');
+  if(links && !links.querySelector('a[href="politica-de-reservas.html"]')){
+    var a=document.createElement('a');
+    a.href='politica-de-reservas.html';
+    a.textContent='Política de Reservas e Compras';
+    var instagram=links.querySelector('a[href*="instagram.com"]');
+    if(instagram) links.insertBefore(a,instagram); else links.appendChild(a);
+  }
+})();
+</script>

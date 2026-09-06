@@ -254,8 +254,9 @@ function moeda(v){
 
 document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  e.preventDefault();
+ const form = e.currentTarget;
  await consultarVagas();
- pendingForm = Object.fromEntries(new FormData(e.currentTarget).entries());
+ pendingForm = Object.fromEntries(new FormData(form).entries());
  const quantidade = Math.max(1, Number(pendingForm.quantidade) || 1);
 
  if(vagasAtuais !== null && quantidade > vagasAtuais){
@@ -284,7 +285,7 @@ document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  document.getElementById("revRestricao").textContent = pendingForm.tem_restricao === "Sim" ? (pendingForm.restricao || "Sim, não informada") : "Não";
  document.getElementById("revObservacoes").textContent = pendingForm.observacoes || "Nenhuma";
 
- e.currentTarget.style.display = "none";
+ form.style.display = "none";
  document.getElementById("reviewStep").classList.add("active");
  document.getElementById("step1").classList.remove("current");
  document.getElementById("step2").classList.add("current");

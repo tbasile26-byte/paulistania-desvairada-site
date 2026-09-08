@@ -301,9 +301,7 @@ document.getElementById("editReview").addEventListener("click", ()=>{
 });
 
 document.getElementById("confirmReview").addEventListener("click", async ()=>{
- if(!pendingForm) return;
-
- await consultarVagas();
+ if(!pendingForm || document.getElementById("confirmReview").disabled) return; const loadingBtn=document.getElementById("confirmReview"); loadingBtn.disabled=true; loadingBtn.textContent="Registrando… aguarde"; await consultarVagas();
  const quantidade = Math.max(1, Number(pendingForm.quantidade) || 1);
  if(vagasAtuais !== null && quantidade > vagasAtuais){
    alert(vagasAtuais <= 0
@@ -311,14 +309,13 @@ document.getElementById("confirmReview").addEventListener("click", async ()=>{
      : `Enquanto você conferia os dados, as vagas mudaram. Agora restam ${vagasAtuais}.`);
    document.getElementById("reviewStep").classList.remove("active");
    document.getElementById("reservaForm").style.display = "block";
-   document.getElementById("reservaForm").scrollIntoView({behavior:"smooth",block:"start"});
-   return;
+   document.getElementById("reservaForm").scrollIntoView({behavior:"smooth",block:"start"}); loadingBtn.disabled=false; loadingBtn.textContent="Está tudo certo: escolher pagamento"; return;
  }
 
  const btn = document.getElementById("confirmReview");
  btn.disabled = true;
- const original = btn.textContent;
- btn.textContent = "Registrando...";
+ const original = "Está tudo certo: escolher pagamento";
+ btn.textContent = "Registrando… aguarde";
  const payload = {
    ...dados,
    ...pendingForm,
@@ -414,9 +411,7 @@ async function pedirLinkCielo(ref){
 }
 
 document.getElementById("cardPayBtn").addEventListener("click", async ()=>{
-  const btn = document.getElementById("cardPayBtn");
-  const status = document.getElementById("cardStatus");
-  const original = btn.textContent;
+  const btn = document.getElementById("cardPayBtn"); const status = document.getElementById("cardStatus"); const original = btn.textContent;
 
   btn.disabled = true;
   btn.textContent = "Abrindo pagamento seguro...";

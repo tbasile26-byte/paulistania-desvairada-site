@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /checkout.html
+Disallow: /paulistaniadesvairada/checkout.html
+
+Sitemap: https://www.cozinhaculturaearte.com.br/sitemap.xml

@@ -209,9 +209,10 @@ footer{border-top:1px solid var(--line);padding:24px 0 38px;font-size:11px}.foot
 
     <div class="events">
       <article class="event" data-event="cine-10-09"><div class="date"><strong>10</strong><span>SET</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/requiem-cartaz.webp" alt="Réquiem para um Sonho"><div><div class="eyebrow">CineGastronomia</div><h3>Réquiem para um sonho</h3><p>Cinema, comida e conversa em torno de uma obra que permanece depois da sessão.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>valor único</small><strong>R$ 30</strong></div><div class="arrow">→</div></article>
-      <article class="event" data-event="sabores-17-09"><div class="date"><strong>17</strong><span>SET</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/rafaela-capa-reportagem.jpg" alt="Rafaela Basso e pesquisa sobre alimentação de rua"><div><div class="eyebrow">Aprender Comendo</div><h3>Sabores das ruas</h3><p>Curso e conversa sobre comida de rua, história e hábitos alimentares.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>valor único</small><strong>R$ 80</strong></div><div class="arrow">→</div></article>
+      
       <article class="event" data-event="trilhos-27-09"><div class="date"><strong>27</strong><span>SET</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/agenda-trilhos.jpg" alt="Participantes do Trilhos e Temperos reunidos à mesa"><div><div class="eyebrow">Trilhos e Temperos</div><h3>Trilhos e Temperos</h3><p>Uma nova saída para descobrir paisagens, histórias e sabores.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>valor único</small><strong>R$ 160</strong></div><div class="arrow">→</div></article>
       <article class="event" data-event="massa-13-10"><div class="date"><strong>13</strong><span>OUT</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/massa-coloridas-grupo.jpg" alt="Cozinhando Juntos: Massa"><div><div class="eyebrow">Cozinhando Juntos</div><h3>Massa</h3><p>Abra a massa, cozinhe junto e descubra segredos que transformam o simples em inesquecível.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>bilhete consciente</small><strong>R$ 90 · 120 · 180</strong></div><div class="arrow">→</div></article>
+      <article class="event" data-event="sabores-05-11"><div class="date"><strong>05</strong><span>NOV</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/rafaela-capa-reportagem.jpg" alt="Rafaela Basso e pesquisa sobre alimentação de rua"><div><div class="eyebrow">Aprender Comendo</div><h3>Sabores das ruas</h3><p>Curso e conversa sobre comida de rua, história e hábitos alimentares.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>valor único</small><strong>R$ 80</strong></div><div class="arrow">→</div></article>
       <article class="event" data-event="meis-12-11"><div class="date"><strong>12</strong><span>NOV</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/agenda-meis.jpg" alt="Abelha nativa sem ferrão em flor"><div><div class="eyebrow">Oficina Comestível</div><h3>Meles Nativos</h3><p>Uma imersão no universo dos meles brasileiros: origem, sabores e harmonizações.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>bilhete consciente</small><strong>R$ 120 · 150 · 180</strong></div><div class="arrow">→</div></article>
       <article class="event" data-event="empanadas-24-11"><div class="date"><strong>24</strong><span>NOV</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/empanadas-assadas.jpg" alt="Empanadas assadas"><div><div class="eyebrow">Cozinhando Juntos</div><h3>Empanadas</h3><p>Massas, recheios e dobras para criar empanadas irresistíveis do começo ao fim.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>bilhete consciente</small><strong>R$ 90 · 150 · 180</strong></div><div class="arrow">→</div></article>
       <article class="event" data-event="bolachas-01-12"><div class="date"><strong>01</strong><span>DEZ</span></div><img loading="lazy" decoding="async" class="event-thumb" src="assets/agenda-bolachinhas.jpg" alt="Participantes da oficina de bolachinhas natalinas"><div><div class="eyebrow">Cozinhando Juntos</div><h3>Bolachinhas Natalinas</h3><p>Receitas tradicionais, aromas de festa e muitas lembranças para levar para casa.</p><div class="buy-actions"><button class="primary buy">Comprar</button></div></div><div class="price"><small>bilhete consciente</small><strong>R$ 120 · 150 · 180</strong></div><div class="arrow">→</div></article>
@@ -315,7 +316,7 @@ const PAYMENT = {
   pixKey: "INSIRA_A_CHAVE_PIX",
   cielo: {
     "cine-10-09": "",
-    "sabores-17-09": "",
+    "sabores-05-11": "",
     "trilhos-27-09": "",
     "massa-13-10": "",
     "meis-12-11": "",
@@ -325,7 +326,7 @@ const PAYMENT = {
 };
 const EVENT_PAGE = {
  "cine-10-09":"cinegastronomia-requiem.html",
- "sabores-17-09":"aprender-comendo-sabores-das-ruas.html",
+ "sabores-05-11":"aprender-comendo-sabores-das-ruas.html",
  "trilhos-27-09":"trilhos-e-temperos-27-setembro.html",
  "massa-13-10":"cozinhando-juntos-massa-13-outubro.html",
  "meis-12-11":"oficina-comestivel-meles-nativos-12-novembro.html",
@@ -334,7 +335,7 @@ const EVENT_PAGE = {
 };
 const EVENT_BUY = {
  "cine-10-09":"checkout.html?experiencia=Réquiem%20para%20um%20sonho&categoria=CineGastronomia&data=10/09/2026&bilhete=Bilhete%20individual&valor=30",
- "sabores-17-09":"checkout.html?experiencia=Sabores%20das%20ruas&categoria=Aprender%20Comendo&data=17/09/2026&bilhete=Bilhete%20individual&valor=80",
+ "sabores-05-11":"checkout.html?experiencia=Sabores%20das%20ruas&categoria=Aprender%20Comendo&data=05/11/2026&bilhete=Bilhete%20individual&valor=80",
  "trilhos-27-09":"checkout.html?experiencia=Trilhos%20e%20Temperos&categoria=Trilhos%20e%20Temperos&data=27/09/2026&bilhete=Bilhete%20individual&valor=160",
  "massa-13-10":"cozinhando-juntos-massa-13-outubro.html#comprar",
  "meis-12-11":"oficina-comestivel-meles-nativos-12-novembro.html#comprar",

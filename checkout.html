@@ -163,7 +163,7 @@ document.getElementById("sumCat").textContent = dados.categoria || "Experiência
 document.getElementById("sumTitle").textContent = dados.experiencia || "Selecione uma experiência";
 document.getElementById("sumMeta").textContent = [dados.data, dados.bilhete, dados.valor ? "R$ "+dados.valor : ""].filter(Boolean).join(" · ") || "Os dados serão preenchidos automaticamente pelo botão de compra.";
 if(vendasPausadas){
-  document.querySelector(".steps").hidden = true;
+  document.querySelector(".steps").style.display = "none";
   document.getElementById("reservaForm").hidden = true;
   const avisoPausa = document.createElement("div");
   avisoPausa.className = "notice";

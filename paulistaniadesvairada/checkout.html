@@ -162,9 +162,19 @@ const dados = {
   bilhete: p.get("bilhete") || "",
   valor: p.get("valor") || ""
 };
+const vendasPausadas = dados.experiencia.trim().toLowerCase() === "empanadas" && dados.data === "24/11/2026";
 document.getElementById("sumCat").textContent = dados.categoria || "Experiência";
 document.getElementById("sumTitle").textContent = dados.experiencia || "Selecione uma experiência";
 document.getElementById("sumMeta").textContent = [dados.data, dados.bilhete, dados.valor ? "R$ "+dados.valor : ""].filter(Boolean).join(" · ") || "Os dados serão preenchidos automaticamente pelo botão de compra.";
+if(vendasPausadas){
+  document.querySelector(".steps").hidden = true;
+  document.getElementById("reservaForm").hidden = true;
+  const avisoPausa = document.createElement("div");
+  avisoPausa.className = "notice";
+  avisoPausa.style.margin = "24px 0";
+  avisoPausa.innerHTML = "<strong>Vendas temporariamente pausadas.</strong><br>No momento, não estamos aceitando novas reservas para a experiência Empanadas de 24 de novembro.";
+  document.querySelector(".summarybox").after(avisoPausa);
+}
 
 let pendingForm = null;
 let pendingTotal = 0;
@@ -254,6 +264,10 @@ function moeda(v){
 
 document.getElementById("reservaForm").addEventListener("submit", async (e)=>{
  e.preventDefault();
+ if(vendasPausadas){
+   alert("As vendas para esta experiência estão temporariamente pausadas.");
+   return;
+ }
  const form = e.currentTarget;
  await consultarVagas();
  pendingForm = Object.fromEntries(new FormData(form).entries());

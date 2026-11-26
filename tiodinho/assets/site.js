@@ -11,6 +11,16 @@
   if(instagram) footerLinks.insertBefore(politica,instagram);
   else footerLinks.appendChild(politica);
  }
+ const navActions=document.querySelector('.nav-actions');
+ if(navActions&&!navActions.querySelector('a[href="encomendas-natal.html"]')){
+  const order=document.createElement('div');order.className='reserve-stack reserve-order';
+  order.innerHTML='<a class="btn" href="encomendas-natal.html">Encomendas</a><span class="reserve-note">Natal e Ano Novo</span>';
+  navActions.insertBefore(order,navActions.querySelector('.mobile-toggle'));
+ }
+ const mobileReserve=document.querySelector('.mobile-reserve-bar');
+ if(mobileReserve&&!mobileReserve.querySelector('a[href="encomendas-natal.html"]')){
+  const orderMobile=document.createElement('a');orderMobile.href='encomendas-natal.html';orderMobile.innerHTML='Encomendas<small>Natal e Ano Novo</small>';mobileReserve.appendChild(orderMobile);mobileReserve.style.gridTemplateColumns='repeat(3,1fr)';
+ }
  const siteScript=[...document.scripts].find(script=>/\/assets\/site\.js(?:\?|$)/.test(script.src));
  const assetBase=siteScript?siteScript.src.replace(/site\.js(?:\?.*)?$/,''):'assets/';
  const chatbotStyle=document.createElement('link');chatbotStyle.rel='stylesheet';chatbotStyle.href=assetBase+'chatbot.css';document.head.appendChild(chatbotStyle);
